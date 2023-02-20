@@ -1,0 +1,51 @@
+// ================================
+// 変数・ブレイクポイント・メディアクエリ
+// ================================
+// --- ブレイクポイント ---
+$breakpoints: (
+    sp: 375,
+    tb:768,
+    pc:1480,
+);
+
+// --- メディアクエリ ----
+$breakpoint: sp, tb, pc;
+
+$breakpoints: (
+    sp: "only screen and (max-width: 374.9x)",
+    tb: "only screen and (max-width: 767.9px)",
+    pc: "only screen and (max-width: 1480.9px)",
+);
+
+@mixin mq($breakpoint) {
+    @media #{map-get($breakpoints, $breakpoint)} {
+        @content;
+    }
+}
+
+// @include mq(tb) {}
+
+/*PC固定*/
+
+/*pc*/
+@media screen and (max-width: 1480px) {
+    html {
+        font-size: 0.675vw; //1rem=10px
+    }
+}
+
+/*スマホ*/
+@media screen and (max-width: 768px) {
+    html {
+        font-size: 2.666vw;
+        /*
+    デザインカンプが375PX
+      計算式：10(px) / 375(px) * 100 = 2.6666
+      画面幅375pxの時に "font-size: 10px" 相当になる
+    */
+    }
+}
+
+// --- 余白設定 ---
+$padding_pc: 25px;
+$padding_sp: 20px;

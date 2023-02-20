@@ -1,0 +1,52 @@
+@use 'color' as *;
+@use 'mixin' as *;
+
+// ================================
+// タグ、ボタン、見出しなど共通して使うもの
+// ================================
+
+.test {
+    font-size: 20px;
+    color: $blue;
+
+    @include mq(tb) {
+        font-size: 30px;
+        color: red;
+        font-weight: bold;
+    }
+
+    @include mq(sp) {
+        font-size: 20px;
+        color: #000;
+        font-weight: bold;
+    }
+}
+
+// --- 横幅 ---
+.inner {
+    max-width: 1530px;
+    padding-right:$padding_pc;
+    padding-left:$padding_pc;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+// --- 共通 ---
+* {
+    box-sizing:border-box;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+.flex {
+    display:flex;
+    justify-content: space-between;
+}
+

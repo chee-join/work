@@ -1,0 +1,219 @@
+@use '../global/' as *;
+
+.wrapper {
+    max-width: 1480px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(212, 242, 242);
+    height: 300px;
+}
+
+.arrowArea {
+    padding-top: 100px;
+}
+
+.yazirusi {
+    margin-left: auto;
+    margin-right: auto;
+
+    position: relative;
+    width: 100px;
+    transform: rotate(90deg);
+
+    &::before {
+        content: 'About';
+        position: absolute;
+        color: blue;
+        font-size: 16px;
+        top: -30px;
+    }
+}
+
+.line01 {
+    height: 1px;
+    background-color: #000;
+}
+
+.line02 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform-origin: right bottom;
+    width: 20px;
+    height: 1px;
+    background-color: #000;
+    transform: rotate(45deg);
+}
+
+.wrapper {
+    padding: 50px;
+}
+
+.line_box {
+    position: relative;
+    width: 300px;
+    height: auto;
+    border: 2px solid #ccc;
+    border-radius: 20px;
+    padding: 20px;
+
+    &::after {
+        position: absolute;
+        content: "/";
+        color: #ccc;
+        width: 30px;
+        font-size: 30px;
+        font-weight: normal;
+        background-color: rgb(212, 242, 242);
+        bottom: -25px;
+        right: 30px;
+        text-align: center;
+    }
+
+}
+
+.row_triangle {
+    display: inline-block;
+    width: 0px;
+    height: 0px;
+    border: 30px solid;
+    border-color: transparent transparent pink transparent;
+    margin: -12px;
+    transform: rotate(90deg);
+}
+
+.column_triangle {
+    display: block;
+    width: 0px;
+    height: 0px;
+    border: 30px solid;
+    border-color: transparent transparent lightseagreen transparent;
+    margin: -12px;
+    transform: rotate(180deg);
+}
+
+.maru {
+    padding: 20rem 5rem;
+}
+
+.circle-01 {
+    width: 20.5rem;
+    height: 20.5rem;
+    border-radius: 50%;
+    border: solid 2px #ccc;
+}
+
+.circle {
+    width: 20.5rem;
+    height: 20.5rem;
+    border-radius: 50%;
+    border: solid 2px #ccc;
+    background-color: lightseagreen;
+    display: grid;
+    place-items: center;
+    position: relative;
+
+    .circle__image {
+        width: 15.6rem;
+    }
+
+    &::before {
+        position: absolute;
+        content: "";
+        height: 20rem;
+        width: .2rem;
+        background-color: lightseagreen;
+        top: -20rem;
+        z-index: -1;
+    }
+
+    &::after {
+        position: absolute;
+        content: "";
+        height: 20rem;
+        width: .2rem;
+        background-color: rgb(168, 96, 159);
+        top: 0;
+        right: -10rem;
+        transform: rotate(90deg);
+        z-index: -1;
+    }
+}
+
+.note {
+    border-bottom: solid 1px #ccc;
+    line-height: 2.5em;
+    font-size: 16px;
+
+    @include mq(pc) {
+        font-size: 1.6rem;
+    }
+}
+
+.note__line-01 {
+    width: 60%;
+}
+
+.note__line-02 {
+    width: 57.5%;
+}
+
+.note__line-03 {
+    width: 55%;
+}
+
+.note__line-04 {
+    width: 52.5%;
+}
+
+.note__line-05 {
+    width: 50%;
+}
+
+.note__line-06 {
+    width: 47.5%;
+    vertical-align: middle;
+}
+
+.note__line-06-span {
+    display: inline-block;
+    font-size: 12px;
+    line-height: 1;
+    vertical-align: middle;
+
+    @include mq(pc) {
+        font-size:1.2rem;
+    }
+}
+
+.zone_wrapper {
+    width: 60rem;
+    height: auto;
+    margin: 3rem auto;
+}
+
+.zone_wrapper .flex {
+    justify-content: flex-start;
+    gap: 3.05rem;
+}
+
+.zone_heading {
+    font-family: "ofelia-text", sans-serif;
+    font-weight: 300;
+    font-style: italic;
+    font-size: 25px;
+    line-height: 1.6;
+    background-color: rgba(237, 101, 45, 0.3);
+    color: #4172CE;
+    width: 13.8rem;
+    display: grid;
+    place-items: end;
+    align-items: center;
+    border-radius: 50vh 0 0 0;
+    height: 7.5rem;
+    padding-right: 10px;
+
+    @include mq(pc) {
+        font-size:2.5rem;
+    }
+}

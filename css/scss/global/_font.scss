@@ -1,0 +1,20 @@
+// ================================
+// フォント
+// ================================
+
+//フォントの読み込みCDN
+
+
+
+//フォントの指定
+$mv_font: 'Mr Eaves Mod OT';
+$heading_font: 'YuGothic', sans-serif;
+$lead_font: 'Source Sans Pro', sans-serif;
+
+//ページ全体のフォント指定
+body {
+    font-family: 'Noto Sans','Noto Sans JP','Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: #000;
+}
