@@ -145,6 +145,11 @@
     justify-content: flex-start;
     border: solid 2px $blue;
     padding: 2.18rem 3.9rem 3.22rem 5.02rem;
+
+    @include mq(tb) {
+        display: block;
+        padding: 0;
+    }
 }
 
 .note__img {

@@ -50,6 +50,19 @@ body {
   margin-right: auto;
   margin-left: auto;
 }
+@media only screen and (max-width: 1480.9px) {
+  .inner {
+    max-width: 153rem;
+  }
+}
+@media only screen and (max-width: 767.9px) {
+  .inner {
+    max-width: 100%;
+    width: 100%;
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
 
 * {
   box-sizing: border-box;
@@ -68,6 +81,24 @@ a {
 .flex {
   display: flex;
   justify-content: space-between;
+}
+
+.pc_only {
+  display: inline-block;
+}
+@media only screen and (max-width: 767.9px) {
+  .pc_only {
+    display: none;
+  }
+}
+
+.sp_only {
+  display: none;
+}
+@media only screen and (max-width: 767.9px) {
+  .sp_only {
+    display: inline-block;
+  }
 }
 
 .base_btn a {
@@ -253,6 +284,12 @@ a {
   justify-content: flex-start;
   border: solid 2px #4172CE;
   padding: 2.18rem 3.9rem 3.22rem 5.02rem;
+}
+@media only screen and (max-width: 767.9px) {
+  .note_contents {
+    display: block;
+    padding: 0;
+  }
 }
 
 .note__img {

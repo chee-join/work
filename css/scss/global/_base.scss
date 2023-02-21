@@ -29,6 +29,17 @@
     padding-left: $padding_pc;
     margin-right: auto;
     margin-left: auto;
+
+    @include mq(pc) {
+        max-width: 153rem;
+    }
+
+    @include mq(tb) {
+        max-width: 100%;
+        width: 100%;
+        padding-right: $padding_sp;
+        padding-left: $padding_sp;
+    }
 }
 
 // --- 共通 ---
@@ -51,6 +62,23 @@ a {
     justify-content: space-between;
 }
 
+// --- 表示・非表示切り替え ---
+.pc_only {
+    display: inline-block;
+
+    @include mq(tb) {
+        display: none;
+    }
+}
+
+.sp_only {
+    display: none;
+
+    @include mq(tb) {
+        display: inline-block;
+    }
+}
+
 // --- ボタン ---
 .base_btn a {
     width: 300px;
@@ -67,18 +95,18 @@ a {
 .orange_btn a,
 .blue_btn a {
     min-width: 500px;
-    background: linear-gradient(130deg,#E65A24,#F0A53B,#F0A53B);
+    background: linear-gradient(130deg, #E65A24, #F0A53B, #F0A53B);
     padding: 0 2em;
 }
 
 .blue_btn a {
-    background: linear-gradient(90deg,#4076B0,#70BDD1);
+    background: linear-gradient(90deg, #4076B0, #70BDD1);
 }
 
 
 .orange_btn-large a {
     min-width: 780px;
-    background: linear-gradient(130deg,#E65A24,#F0A53B,#F0A53B);
+    background: linear-gradient(130deg, #E65A24, #F0A53B, #F0A53B);
     padding: 0 2em;
 
 }
