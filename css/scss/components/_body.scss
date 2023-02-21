@@ -140,39 +140,82 @@
     }
 }
 
+.note_contents {
+    display:flex;
+    justify-content: flex-start;
+    border: solid  2px $blue;
+    padding: 2.18rem 3.9rem 3.22rem 5.02rem;
+}
+
+.note__img {
+    width: 274px;
+    @include mq(pc) {
+        width: 27.4rem;
+    }
+}
 .note {
     border-bottom: solid 1px #ccc;
-    line-height: 2.5em;
-    font-size: 16px;
+    line-height: calc(54 / 25);
+    font-size: 25px;
 
     @include mq(pc) {
-        font-size: 1.6rem;
+        font-size: 2.5rem;
     }
 }
 
 .note__line-01 {
-    width: 60%;
+    width: 1145px;
+
+    @include mq(pc) {
+        // width: 77.4%;
+        width: 114.5rem;
+    }
 }
 
 .note__line-02 {
-    width: 57.5%;
+    width: 1108px;
+
+    @include mq(pc) {
+        // width: 74.9%;
+        width: 110.8rem;
+    }
 }
 
 .note__line-03 {
-    width: 55%;
+    width: 1077px;
+
+    @include mq(pc) {
+        // width: 72.8%;
+        width: 107.7rem;
+    }
 }
 
 .note__line-04 {
-    width: 52.5%;
+    width: 1040px;
+
+    @include mq(pc) {
+        // width: 70.3%;
+        width: 104rem;
+    }
 }
 
 .note__line-05 {
-    width: 50%;
+    width: 1000px;
+
+    @include mq(pc) {
+        // width: 67.6%;
+        width: 100rem;
+    }
 }
 
 .note__line-06 {
-    width: 47.5%;
+    width: 948px;
     vertical-align: middle;
+
+    @include mq(pc) {
+        // width: 94.1%;
+        width: 94.8rem;
+    }
 }
 
 .note__line-06-span {
@@ -180,11 +223,18 @@
     font-size: 12px;
     line-height: 1;
     vertical-align: middle;
+    width: 414px;
+    margin-left: 140px;
 
     @include mq(pc) {
-        font-size:1.2rem;
+        font-size: 1.2rem;
+        width: 41.4rem;
+        margin-left: 14rem;
     }
 }
+
+
+
 
 .zone_wrapper {
     width: 60rem;
@@ -205,15 +255,18 @@
     line-height: 1.6;
     background-color: rgba(237, 101, 45, 0.3);
     color: #4172CE;
-    width: 13.8rem;
+    width: 138px;
     display: grid;
     place-items: end;
     align-items: center;
     border-radius: 50vh 0 0 0;
-    height: 7.5rem;
+    height: 75px;
     padding-right: 10px;
 
     @include mq(pc) {
-        font-size:2.5rem;
+        font-size: 2.5rem;
+        width: 13.8rem;
+        height: 7.5rem;
     }
 }
+
