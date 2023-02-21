@@ -141,18 +141,25 @@
 }
 
 .note_contents {
-    display:flex;
+    display: flex;
     justify-content: flex-start;
-    border: solid  2px $blue;
+    border: solid 2px $blue;
     padding: 2.18rem 3.9rem 3.22rem 5.02rem;
 }
 
 .note__img {
     width: 274px;
+    margin-left: -35px;
+
     @include mq(pc) {
         width: 27.4rem;
     }
+
+    @include mq(tb) {
+        width: 15.6rem;
+    }
 }
+
 .note {
     border-bottom: solid 1px #ccc;
     line-height: calc(54 / 25);
@@ -267,6 +274,118 @@
         font-size: 2.5rem;
         width: 13.8rem;
         height: 7.5rem;
+
     }
 }
 
+.card {
+    margin-top: 60px;
+    max-width: 1240px;
+    height: auto;
+    margin-right: auto;
+    margin-left: auto;
+
+    @include mq(pc) {
+        max-width: 124rem;
+    }
+}
+
+.card__ul {
+    display: flex;
+    justify-content: space-between;
+    gap: 27.5px;
+
+    @include mq(pc) {
+        gap: 2.75rem;
+    }
+}
+
+.card__wrapper {
+    padding: 2px;
+    border-radius: 53px;
+    background: conic-gradient(#4172CE 0%, #4172CE 2%, #fff 2%, #fff 8%, #4172CE 8%, #4172CE 100%);
+
+    @include mq(pc) {
+        border-radius: 5.3rem;
+    }
+
+    & a {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.card_haikei {
+    background: #fff;
+    border-radius: 53px;
+    text-align: center;
+    padding-top: 20px;
+    padding-left: 80px;
+    padding-right: 80px;
+    padding-bottom: 27.3px;
+
+    @include mq(pc) {
+        padding: 2rem 8rem 2.73rem;
+        border-radius: 5.3rem;
+    }
+}
+
+.card__title {
+    font-size: 28.5px;
+    font-weight: 700;
+    color: $blue;
+    position: relative;
+
+    @include mq(pc) {
+        font-size: 2.85rem;
+    }
+
+    .card__title-span {
+        position: absolute;
+        top: -70px;
+        font-size: 97.6px;
+
+        @include mq(pc) {
+            font-size: 9.76rem;
+            top: -7rem;
+        }
+    }
+}
+
+.card__point-img01 {
+    width: 227px;
+    margin-top: 30px;
+
+    @include mq(pc) {
+        width: 22.7rem;
+        margin-top: 3rem;
+    }
+}
+
+.card__text {
+    color: $blue;
+    font-size: 20px;
+    font-weight: 700;
+    margin-top: 34.1px;
+
+    @include mq(pc) {
+        font-size: 2rem;
+        margin-top: 3.41rem;
+    }
+}
+
+.arrow_bottom {
+    border-bottom: solid 1px $blue;
+    border-right: solid 1px $blue;
+    width: 12px;
+    height: 12px;
+    transform: rotate(45deg);
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.card__arrow-text {
+    margin-top: 20.6px;
+    text-align: center;
+    color: $blue;
+}

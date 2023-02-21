@@ -25,15 +25,15 @@
 // --- 横幅 ---
 .inner {
     max-width: 1530px;
-    padding-right:$padding_pc;
-    padding-left:$padding_pc;
+    padding-right: $padding_pc;
+    padding-left: $padding_pc;
     margin-right: auto;
     margin-left: auto;
 }
 
 // --- 共通 ---
 * {
-    box-sizing:border-box;
+    box-sizing: border-box;
 }
 
 li {
@@ -42,11 +42,43 @@ li {
 
 a {
     text-decoration: none;
-    color: #000;
+    color: #fff;
+    cursor: pointer;
 }
 
 .flex {
-    display:flex;
+    display: flex;
     justify-content: space-between;
 }
 
+// --- ボタン ---
+.base_btn a {
+    width: 300px;
+    background: skyblue;
+    padding: 1em 2em;
+    border-radius: 50vh;
+    font-size: 30px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.orange_btn a,
+.blue_btn a {
+    min-width: 500px;
+    background: linear-gradient(130deg,#E65A24,#F0A53B,#F0A53B);
+    padding: 0 2em;
+}
+
+.blue_btn a {
+    background: linear-gradient(90deg,#4076B0,#70BDD1);
+}
+
+
+.orange_btn-large a {
+    min-width: 780px;
+    background: linear-gradient(130deg,#E65A24,#F0A53B,#F0A53B);
+    padding: 0 2em;
+
+}
