@@ -14,5 +14,15 @@
         max-width: 1000px;
         margin-left: auto;
         margin-right: auto;
+
+        @include mq(pc) {
+            width: 100rem;
+            background-color: lightblue
+        }
+
+        @include mq(tb) {
+            width: 100%;
+            background-color: lightcoral;
+        }
     }
 }

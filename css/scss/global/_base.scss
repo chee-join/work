@@ -97,6 +97,10 @@ a {
     min-width: 500px;
     background: linear-gradient(130deg, #E65A24, #F0A53B, #F0A53B);
     padding: 0 2em;
+
+    @include mq(tb) {
+        min-width: 100%;
+    }
 }
 
 .blue_btn a {
@@ -105,8 +109,19 @@ a {
 
 
 .orange_btn-large a {
-    min-width: 780px;
+    max-width: 780px;
     background: linear-gradient(130deg, #E65A24, #F0A53B, #F0A53B);
     padding: 0 2em;
+    margin-right: auto;
+    margin-left: auto;
+
+    @include mq(pc) {
+        max-width: 78rem;
+    }
+
+    @include mq(tb) {
+        max-width: 28rem;
+        font-size: 2.5rem;
+    }
 
 }

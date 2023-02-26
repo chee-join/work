@@ -1,11 +1,13 @@
 @use '../global/' as *;
 
-.wrapper {
+
+.triangle_wrapper {
     max-width: 1480px;
     margin-left: auto;
     margin-right: auto;
     background-color: rgb(212, 242, 242);
     height: 300px;
+    padding: 50px;
 }
 
 .arrowArea {
@@ -45,9 +47,9 @@
     transform: rotate(45deg);
 }
 
-.wrapper {
-    padding: 50px;
-}
+// .wrapper {
+//     padding: 50px;
+// }
 
 .line_box {
     position: relative;
@@ -93,7 +95,8 @@
 }
 
 .maru {
-    padding: 20rem 5rem;
+    padding-top: 2rem;
+    padding-bottom: 3rem;
 }
 
 .circle-01 {
@@ -125,6 +128,10 @@
         background-color: lightseagreen;
         top: -20rem;
         z-index: -1;
+
+        @include mq(tb) {
+            content: none;
+        }
     }
 
     &::after {
@@ -137,6 +144,10 @@
         right: -10rem;
         transform: rotate(90deg);
         z-index: -1;
+
+        @include mq(tb) {
+            content: none;
+        }
     }
 }
 
@@ -147,8 +158,7 @@
     padding: 2.18rem 3.9rem 3.22rem 5.02rem;
 
     @include mq(tb) {
-        display: block;
-        padding: 0;
+        display: none;
     }
 }
 
@@ -158,10 +168,6 @@
 
     @include mq(pc) {
         width: 27.4rem;
-    }
-
-    @include mq(tb) {
-        width: 15.6rem;
     }
 }
 
@@ -245,18 +251,69 @@
     }
 }
 
+.sp-note__contents {
 
+    @include mq(pc) {
+        display: none;
+        width: 100%;
+        background: #fff;
+        border: solid 1px $blue;
+        padding: 20px 10px;
+    }
+
+    @include mq(tb) {
+        display: block;
+        width: 100%;
+        background: #fff;
+        border: solid 1px $blue;
+        padding: 20px 10px;
+    }
+
+    .sp-note__contents-title {
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: $blue;
+        text-align: center;
+    }
+
+    .sp-note__wrapper {
+        margin-top: 23px;
+        background: #fff;
+        background-image: linear-gradient(180deg, #ccc 1px, transparent 1px);
+        /* 罫線の色と太さ  */
+        background-size: 100% 2.5em;
+        /* 行の高さ */
+        line-height: 2.5em;
+        /* 文字の高さ */
+        padding-bottom: 1px;
+        /* 最終行の下にも罫線を引く */
+    }
+
+    .sp-note__wrapper-annotation {
+        font-size: 1.1rem;
+        letter-spacing: .1em;
+        text-indent: 1em;
+    }
+}
 
 
 .zone_wrapper {
     width: 60rem;
     height: auto;
     margin: 3rem auto;
+
+    @include mq(tb) {
+        width: 100%;
+    }
 }
 
 .zone_wrapper .flex {
     justify-content: flex-start;
     gap: 3.05rem;
+
+    @include mq(tb) {
+        gap: 1.6rem;
+    }
 }
 
 .zone_heading {
@@ -279,7 +336,12 @@
         font-size: 2.5rem;
         width: 13.8rem;
         height: 7.5rem;
+    }
 
+    @include mq(tb) {
+        font-size: 1.2rem;
+        width: 7.3rem;
+        height: 4rem;
     }
 }
 
@@ -303,6 +365,10 @@
     @include mq(pc) {
         gap: 2.75rem;
     }
+
+    @include mq(tb) {
+        flex-direction: column;
+    }
 }
 
 .card__wrapper {
@@ -318,6 +384,11 @@
         width: 100%;
         height: 100%;
     }
+
+    @include mq(tb) {
+        background: none;
+        border: solid 2px $blue;
+    }
 }
 
 .card_haikei {
@@ -332,6 +403,12 @@
     @include mq(pc) {
         padding: 2rem 8rem 2.73rem;
         border-radius: 5.3rem;
+    }
+
+    @include mq(tb) {
+        padding: 0;
+        display: flex;
+        align-items: center;
     }
 }
 
@@ -353,6 +430,14 @@
         @include mq(pc) {
             font-size: 9.76rem;
             top: -7rem;
+        }
+
+        @include mq(tb) {
+            font-size: 4rem;
+            font-weight: 400;
+            letter-spacing: 0;
+            top: 0;
+            left: 0;
         }
     }
 }
