@@ -24,6 +24,17 @@ body {
     */
   }
 }
+body {
+  opacity: 0;
+  animation: fadeIn 3s ease;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn {
+  100% {
+    opacity: 1;
+  }
+}
 .test {
   font-size: 20px;
   color: #4172CE;
@@ -81,6 +92,15 @@ a {
 .flex {
   display: flex;
   justify-content: space-between;
+}
+
+.contents_title {
+  margin: 50px auto;
+  max-width: 800px;
+  background: linear-gradient(-35deg, lightblue 98%, transparent 0);
+  color: #fff;
+  padding: 10px 30px;
+  font-size: 1.8rem;
 }
 
 .pc_only {
@@ -248,6 +268,11 @@ a {
   }
 }
 
+.toggle {
+  transform: translateY(0);
+  opacity: 1;
+}
+
 /*閉じるの前のバツ印を疑似要素を使って作る*/
 .close {
   position: relative;
@@ -308,11 +333,6 @@ a {
   padding: 10px 0;
   z-index: 100;
   display: none;
-}
-
-.toggle {
-  transform: translateY(0);
-  opacity: 1;
 }
 
 .triangle_wrapper {
@@ -821,4 +841,36 @@ a {
   margin-top: 20.6px;
   text-align: center;
   color: #4172CE;
+}
+
+.js_01 {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.js_01__text {
+  max-width: 800px;
+  background: #fff;
+  border: solid 2px #3F4548;
+  padding: 20px;
+  font-weight: bold;
+  position: relative;
+  margin: auto;
+}
+.js_01__text::after {
+  content: "＋";
+  position: absolute;
+  bottom: 15px;
+  right: 20px;
+  font-size: 24px;
+}
+
+.js_01__text.open::after {
+  content: "－";
+}
+
+.js_01__text-body {
+  display: none;
+  background: rgb(212, 242, 242);
+  height: 300px;
 }

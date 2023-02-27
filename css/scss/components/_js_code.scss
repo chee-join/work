@@ -1,0 +1,34 @@
+@use '../global/' as *;
+
+.js_01 {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.js_01__text {
+    max-width: 800px;
+    background: #fff;
+    border: solid 2px #3F4548;
+    padding: 20px;
+    font-weight: bold;
+    position: relative;
+    margin: auto;
+
+    &::after {
+        content: '＋';
+        position: absolute;
+        bottom:15px;
+        right: 20px;
+        font-size: 24px;
+    }
+}
+
+.js_01__text.open::after {
+    content: '－';
+}
+
+.js_01__text-body {
+    display: none;
+    background: rgb(212, 242, 242);
+    height: 300px;
+}

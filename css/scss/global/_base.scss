@@ -2,6 +2,22 @@
 @use 'mixin' as *;
 
 // ================================
+// ページ全体をふわっと読み込みCSS
+// ================================
+
+body {
+    opacity: 0;
+    animation: fadeIn 3s ease;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn {
+    100% {
+        opacity: 1;
+    }
+}
+
+// ================================
 // タグ、ボタン、見出しなど共通して使うもの
 // ================================
 
@@ -60,6 +76,15 @@ a {
 .flex {
     display: flex;
     justify-content: space-between;
+}
+
+.contents_title {
+margin: 50px auto;
+    max-width:800px;
+    background: linear-gradient(-35deg, lightblue 98%, transparent 0);
+    color: #fff;
+    padding: 10px 30px;
+    font-size: 1.8rem;
 }
 
 // --- 表示・非表示切り替え ---
