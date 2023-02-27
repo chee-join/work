@@ -1,16 +1,16 @@
 @use '../global/' as *;
 
-#header {
+.header {
     width: 100%;
     height: 100px;
     background-color: lavenderblush;
 
     .header__inner {
-        padding-left:$padding_pc;
-        padding-right:$padding_pc;
+        padding-left: $padding_pc;
+        padding-right: $padding_pc;
         background-color: #ccc;
         align-items: center;
-        height: 100%;//←大事。headerの高さに合わせる
+        height: 100%; //←大事。headerの高さに合わせる
         max-width: 1000px;
         margin-left: auto;
         margin-right: auto;
@@ -24,5 +24,160 @@
             width: 100%;
             background-color: lightcoral;
         }
+
+        .pc_nav {
+            @include mq(tb) {
+                display: none;
+            }
+        }
     }
+}
+
+#hamburger {
+    display: none;
+
+    @include mq(tb) {
+        display: block;
+        position: relative;
+        width: 50px;
+        height: 45px;
+        margin-left: auto;
+        background-color: #747272;
+    }
+}
+
+#hamburger span {
+    display: block;
+    width: 100%;
+    height: 3px;
+
+    position: absolute;
+    top: 50%;
+    left: 0;
+    background-color: #fff;
+    transform: translateY(-50%);
+}
+
+#hamburger::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #FFF;
+}
+
+#hamburger::after {
+    content: '';
+    display: block;
+    position: absolute;
+
+    height: 2px;
+    background-color: #FFF;
+    bottom: 0;
+    left: 0;
+    width: 70%;
+}
+
+.sp_nav {
+    display: none;
+
+    @include mq(tb) {
+        display: block;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: rgba(0, 0, 0, .8);
+        transition: all .2s ease-in-out;
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+
+}
+
+/*閉じるの前のバツ印を疑似要素を使って作る*/
+.close {
+    position: relative;
+    padding-left: 20px;
+
+    &:before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 0;
+        display: block;
+        width: 16px;
+        height: 1px;
+        background: #FFF;
+        transform: rotate(45deg);
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 0;
+        display: block;
+        width: 16px;
+        height: 1px;
+        background: #FFF;
+        transform: rotate(-45deg);
+
+    }
+}
+
+.sp_nav ul {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.sp_nav ul li {
+    margin: 0;
+    padding: 0;
+}
+
+.sp_nav ul li span {
+    font-size: 15px;
+    color: #fff;
+}
+
+.sp_nav ul li span,
+.sp_nav ul li a {
+    display: block;
+    padding: 20px 0;
+}
+
+
+
+//--- 単純なヘッダー追従・ｊQueryなし・headerの消失なし・stickyを使用---
+// .header_test01 {
+//         position: sticky;
+//         top: 0;
+//         left: 0;
+//         z-index: 100;
+// }
+
+//--- 一定の高さをスクロールしたらヘッダー追従CSS ---
+.is-fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 10px 0;
+    z-index: 100;
+    display: none;
+}
+
+//--- スマホナビの表示・非表示の切り替え（ドロワーメニュー）CSS ---
+.toggle {
+    transform: translateY(0);
+    opacity: 1;
 }
