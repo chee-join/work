@@ -14,7 +14,7 @@ body {
   }
 }
 /*スマホ*/
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   html {
     font-size: 2.666vw;
     /*
@@ -39,14 +39,14 @@ body {
   font-size: 20px;
   color: #4172CE;
 }
-@media only screen and (max-width: 767.9px) {
+@media only screen and (max-width: 768px) {
   .test {
     font-size: 30px;
     color: red;
     font-weight: bold;
   }
 }
-@media only screen and (max-width: 374.9x) {
+@media only screen and (max-width: 375x) {
   .test {
     font-size: 20px;
     color: #000;
@@ -56,22 +56,22 @@ body {
 
 .inner {
   max-width: 1530px;
-  padding-right: 25px;
-  padding-left: 25px;
+  padding-right: 2.5rem;
+  padding-left: 2.5rem;
   margin-right: auto;
   margin-left: auto;
 }
-@media only screen and (max-width: 1480.9px) {
+@media only screen and (max-width: 1480px) {
   .inner {
     max-width: 153rem;
   }
 }
-@media only screen and (max-width: 767.9px) {
+@media only screen and (max-width: 768px) {
   .inner {
     max-width: 100%;
     width: 100%;
-    padding-right: 20px;
-    padding-left: 20px;
+    padding-right: 2rem;
+    padding-left: 2rem;
   }
 }
 
@@ -85,7 +85,7 @@ li {
 
 a {
   text-decoration: none;
-  color: #fff;
+  color: #000;
   cursor: pointer;
 }
 
@@ -106,7 +106,7 @@ a {
 .pc_only {
   display: inline-block;
 }
-@media only screen and (max-width: 767.9px) {
+@media only screen and (max-width: 768px) {
   .pc_only {
     display: none;
   }
@@ -115,7 +115,7 @@ a {
 .sp_only {
   display: none;
 }
-@media only screen and (max-width: 767.9px) {
+@media only screen and (max-width: 768px) {
   .sp_only {
     display: inline-block;
   }
@@ -139,7 +139,7 @@ a {
   background: linear-gradient(130deg, #E65A24, #F0A53B, #F0A53B);
   padding: 0 2em;
 }
-@media only screen and (max-width: 767.9px) {
+@media only screen and (max-width: 768px) {
   .orange_btn a,
   .blue_btn a {
     min-width: 100%;
@@ -157,12 +157,12 @@ a {
   margin-right: auto;
   margin-left: auto;
 }
-@media only screen and (max-width: 1480.9px) {
+@media only screen and (max-width: 1480px) {
   .orange_btn-large a {
     max-width: 78rem;
   }
 }
-@media only screen and (max-width: 767.9px) {
+@media only screen and (max-width: 768px) {
   .orange_btn-large a {
     max-width: 28rem;
     font-size: 2.5rem;
@@ -175,8 +175,8 @@ a {
   background-color: lavenderblush;
 }
 .header .header__inner {
-  padding-left: 25px;
-  padding-right: 25px;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
   background-color: #ccc;
   align-items: center;
   height: 100%;
@@ -184,19 +184,19 @@ a {
   margin-left: auto;
   margin-right: auto;
 }
-@media only screen and (max-width: 1480.9px) {
+@media only screen and (max-width: 1480px) {
   .header .header__inner {
     width: 100rem;
     background-color: lightblue;
   }
 }
-@media only screen and (max-width: 767.9px) {
+@media only screen and (max-width: 768px) {
   .header .header__inner {
     width: 100%;
     background-color: lightcoral;
   }
 }
-@media only screen and (max-width: 767.9px) {
+@media only screen and (max-width: 768px) {
   .header .header__inner .pc_nav {
     display: none;
   }
@@ -205,7 +205,7 @@ a {
 #hamburger {
   display: none;
 }
-@media only screen and (max-width: 767.9px) {
+@media only screen and (max-width: 768px) {
   #hamburger {
     display: block;
     position: relative;
@@ -252,7 +252,7 @@ a {
 .sp_nav {
   display: none;
 }
-@media only screen and (max-width: 767.9px) {
+@media only screen and (max-width: 768px) {
   .sp_nav {
     display: block;
     position: fixed;
@@ -333,6 +333,157 @@ a {
   padding: 10px 0;
   z-index: 100;
   display: none;
+}
+
+@media only screen and (max-width: 768px) {
+  .mv .inner {
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.mv__wrapper {
+  display: flex;
+  justify-content: space-between;
+  height: 485px;
+}
+@media only screen and (max-width: 1480px) {
+  .mv__wrapper {
+    height: 48.5rem;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .mv__wrapper {
+    flex-direction: column-reverse;
+    height: 100%;
+    text-align: center;
+  }
+}
+
+.mv__title {
+  width: 31.6%;
+  background: linear-gradient(270deg, #74C6D2, #68b0b0, #20b2aa);
+  color: #fff;
+  padding: 58px 48px 48.5px 79px;
+}
+@media only screen and (max-width: 1480px) {
+  .mv__title {
+    padding: 5.8rem 4.8rem 4.85rem 6rem;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .mv__title {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -19rem;
+    background: linear-gradient(270deg, rgba(116, 198, 210, 0.8), rgba(104, 176, 176, 0.8), rgba(32, 178, 170, 0.8));
+    width: 83.5%;
+    padding: 1.9rem 4rem 2.3rem 4rem;
+  }
+}
+
+.mv__title-h1 {
+  font-family: "mr-eaves-modern", sans-serif;
+  font-size: 98px;
+  font-weight: 400;
+  font-style: italic;
+  line-height: 0.887755102;
+  letter-spacing: 0.1em;
+}
+@media only screen and (max-width: 1480px) {
+  .mv__title-h1 {
+    font-size: 9.8rem;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .mv__title-h1 {
+    font-size: 5.6rem;
+    line-height: 0.75;
+    margin-top: 0.3rem;
+  }
+}
+
+.mv__title-lead-01 {
+  font-size: 20px;
+  font-family: "Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
+  font-weight: 700;
+}
+@media only screen and (max-width: 1480px) {
+  .mv__title-lead-01 {
+    font-size: 2rem;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .mv__title-lead-01 {
+    font-size: 1.5rem;
+    letter-spacing: 0.15em;
+    line-height: 1.1333333333;
+  }
+}
+
+.mv__title-lead-02 {
+  font-family: "Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+}
+@media only screen and (max-width: 1480px) {
+  .mv__title-lead-02 {
+    font-size: 1.1rem;
+    letter-spacing: 0.07em;
+    margin-top: 1.2rem;
+  }
+}
+
+.mv__title-button {
+  margin-top: 15.2px;
+  max-width: 319px;
+  border-radius: 50vh;
+  background: linear-gradient(130deg, #E65A24, #F0A53B, #F0A53B);
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+@media only screen and (max-width: 1480px) {
+  .mv__title-button {
+    margin-top: 1.52rem;
+    max-width: 31.9rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .mv__title-button {
+    margin-top: 0.8rem;
+  }
+}
+.mv__title-button a {
+  font-size: 20px;
+  color: #FFF;
+  width: 100%;
+  height: auto;
+  display: grid;
+  place-items: center;
+}
+@media only screen and (max-width: 1480px) {
+  .mv__title-button a {
+    font-size: 2rem;
+  }
+}
+
+.mv__image {
+  width: 68.4%;
+  height: auto;
+  overflow: hidden;
+}
+@media only screen and (max-width: 1480px) {
+  .mv__image {
+    width: 100%;
+  }
+}
+.mv__image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
 }
 
 .triangle_wrapper {
@@ -450,11 +601,11 @@ a {
   content: "";
   height: 20rem;
   width: 0.2rem;
-  background-color: lightseagreen;
+  background-color: #20b2aa;
   top: -20rem;
   z-index: -1;
 }
-@media only screen and (max-width: 767.9px) {
+@media only screen and (max-width: 768px) {
   .circle::before {
     content: none;
   }
@@ -470,7 +621,7 @@ a {
   transform: rotate(90deg);
   z-index: -1;
 }
-@media only screen and (max-width: 767.9px) {
+@media only screen and (max-width: 768px) {
   .circle::after {
     content: none;
   }
@@ -482,7 +633,7 @@ a {
   border: solid 2px #4172CE;
   padding: 2.18rem 3.9rem 3.22rem 5.02rem;
 }
-@media only screen and (max-width: 767.9px) {
+@media only screen and (max-width: 768px) {
   .note_contents {
     display: none;
   }
@@ -492,7 +643,7 @@ a {
   width: 274px;
   margin-left: -35px;
 }
-@media only screen and (max-width: 1480.9px) {
+@media only screen and (max-width: 1480px) {
   .note__img {
     width: 27.4rem;
   }
@@ -503,7 +654,7 @@ a {
   line-height: 2.16;
   font-size: 25px;
 }
-@media only screen and (max-width: 1480.9px) {
+@media only screen and (max-width: 1480px) {
   .note {
     font-size: 2.5rem;
   }
@@ -512,7 +663,7 @@ a {
 .note__line-01 {
   width: 1145px;
 }
-@media only screen and (max-width: 1480.9px) {
+@media only screen and (max-width: 1480px) {
   .note__line-01 {
     width: 114.5rem;
   }
@@ -521,7 +672,7 @@ a {
 .note__line-02 {
   width: 1108px;
 }
-@media only screen and (max-width: 1480.9px) {
+@media only screen and (max-width: 1480px) {
   .note__line-02 {
     width: 110.8rem;
   }
@@ -530,7 +681,7 @@ a {
 .note__line-03 {
   width: 1077px;
 }
-@media only screen and (max-width: 1480.9px) {
+@media only screen and (max-width: 1480px) {
   .note__line-03 {
     width: 107.7rem;
   }
@@ -539,7 +690,7 @@ a {
 .note__line-04 {
   width: 1040px;
 }
-@media only screen and (max-width: 1480.9px) {
+@media only screen and (max-width: 1480px) {
   .note__line-04 {
     width: 104rem;
   }
@@ -548,7 +699,7 @@ a {
 .note__line-05 {
   width: 1000px;
 }
-@media only screen and (max-width: 1480.9px) {
+@media only screen and (max-width: 1480px) {
   .note__line-05 {
     width: 100rem;
   }
@@ -558,7 +709,7 @@ a {
   width: 948px;
   vertical-align: middle;
 }
-@media only screen and (max-width: 1480.9px) {
+@media only screen and (max-width: 1480px) {
   .note__line-06 {
     width: 94.8rem;
   }
@@ -572,7 +723,7 @@ a {
   width: 414px;
   margin-left: 140px;
 }
-@media only screen and (max-width: 1480.9px) {
+@media only screen and (max-width: 1480px) {
   .note__line-06-span {
     font-size: 1.2rem;
     width: 41.4rem;
@@ -580,7 +731,7 @@ a {
   }
 }
 
-@media only screen and (max-width: 1480.9px) {
+@media only screen and (max-width: 1480px) {
   .sp-note__contents {
     display: none;
     width: 100%;
@@ -589,7 +740,7 @@ a {
     padding: 20px 10px;
   }
 }
-@media only screen and (max-width: 767.9px) {
+@media only screen and (max-width: 768px) {
   .sp-note__contents {
     display: block;
     width: 100%;
@@ -627,7 +778,7 @@ a {
   height: auto;
   margin: 3rem auto;
 }
-@media only screen and (max-width: 767.9px) {
+@media only screen and (max-width: 768px) {
   .zone_wrapper {
     width: 100%;
   }
@@ -637,7 +788,7 @@ a {
   justify-content: flex-start;
   gap: 3.05rem;
 }
-@media only screen and (max-width: 767.9px) {
+@media only screen and (max-width: 768px) {
   .zone_wrapper .flex {
     gap: 1.6rem;
   }
@@ -659,14 +810,14 @@ a {
   height: 75px;
   padding-right: 10px;
 }
-@media only screen and (max-width: 1480.9px) {
+@media only screen and (max-width: 1480px) {
   .zone_heading {
     font-size: 2.5rem;
     width: 13.8rem;
     height: 7.5rem;
   }
 }
-@media only screen and (max-width: 767.9px) {
+@media only screen and (max-width: 768px) {
   .zone_heading {
     font-size: 1.2rem;
     width: 7.3rem;
@@ -681,7 +832,7 @@ a {
   margin-right: auto;
   margin-left: auto;
 }
-@media only screen and (max-width: 1480.9px) {
+@media only screen and (max-width: 1480px) {
   .card {
     max-width: 124rem;
   }
@@ -692,12 +843,12 @@ a {
   justify-content: space-between;
   gap: 27.5px;
 }
-@media only screen and (max-width: 1480.9px) {
+@media only screen and (max-width: 1480px) {
   .card__ul {
     gap: 2.75rem;
   }
 }
-@media only screen and (max-width: 767.9px) {
+@media only screen and (max-width: 768px) {
   .card__ul {
     flex-direction: column;
   }
@@ -708,12 +859,12 @@ a {
   border-radius: 53px;
   background: conic-gradient(#4172CE 0%, #4172CE 2%, #fff 2%, #fff 8%, #4172CE 8%, #4172CE 100%);
 }
-@media only screen and (max-width: 1480.9px) {
+@media only screen and (max-width: 1480px) {
   .card__wrapper {
     border-radius: 5.3rem;
   }
 }
-@media only screen and (max-width: 767.9px) {
+@media only screen and (max-width: 768px) {
   .card__wrapper {
     border-radius: 2rem;
   }
@@ -722,7 +873,7 @@ a {
   width: 100%;
   height: 100%;
 }
-@media only screen and (max-width: 767.9px) {
+@media only screen and (max-width: 768px) {
   .card__wrapper {
     background: none;
     border: solid 2px #4172CE;
@@ -738,13 +889,13 @@ a {
   padding-right: 80px;
   padding-bottom: 27.3px;
 }
-@media only screen and (max-width: 1480.9px) {
+@media only screen and (max-width: 1480px) {
   .card_haikei {
     padding: 2rem 8rem 2.73rem;
     border-radius: 5.3rem;
   }
 }
-@media only screen and (max-width: 767.9px) {
+@media only screen and (max-width: 768px) {
   .card_haikei {
     padding: 2.5rem 1rem;
     display: flex;
@@ -759,12 +910,12 @@ a {
   color: #4172CE;
   position: relative;
 }
-@media only screen and (max-width: 1480.9px) {
+@media only screen and (max-width: 1480px) {
   .card__title {
     font-size: 2.85rem;
   }
 }
-@media only screen and (max-width: 767.9px) {
+@media only screen and (max-width: 768px) {
   .card__title {
     font-size: 1.5rem;
   }
@@ -774,13 +925,13 @@ a {
   top: -70px;
   font-size: 97.6px;
 }
-@media only screen and (max-width: 1480.9px) {
+@media only screen and (max-width: 1480px) {
   .card__title .card__title-span {
     font-size: 9.76rem;
     top: -7rem;
   }
 }
-@media only screen and (max-width: 767.9px) {
+@media only screen and (max-width: 768px) {
   .card__title .card__title-span {
     font-size: 4rem;
     font-weight: 400;
@@ -794,13 +945,13 @@ a {
   width: 227px;
   margin-top: 30px;
 }
-@media only screen and (max-width: 1480.9px) {
+@media only screen and (max-width: 1480px) {
   .card__point-img01 {
     width: 22.7rem;
     margin-top: 3rem;
   }
 }
-@media only screen and (max-width: 767.9px) {
+@media only screen and (max-width: 768px) {
   .card__point-img01 {
     width: 5rem;
     margin-top: 0;
@@ -813,13 +964,13 @@ a {
   font-weight: 700;
   margin-top: 34.1px;
 }
-@media only screen and (max-width: 1480.9px) {
+@media only screen and (max-width: 1480px) {
   .card__text {
     font-size: 2rem;
     margin-top: 3.41rem;
   }
 }
-@media only screen and (max-width: 767.9px) {
+@media only screen and (max-width: 768px) {
   .card__text {
     font-size: 1.5rem;
     margin-top: 0;

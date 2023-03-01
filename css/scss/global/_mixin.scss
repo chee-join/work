@@ -12,9 +12,9 @@ $breakpoints: (
 $breakpoint: sp, tb, pc;
 
 $breakpoints: (
-    sp: "only screen and (max-width: 374.9x)",
-    tb: "only screen and (max-width: 767.9px)",
-    pc: "only screen and (max-width: 1480.9px)",
+    sp: "only screen and (max-width: 375x)",
+    tb: "only screen and (max-width: 768px)",
+    pc: "only screen and (max-width: 1480px)",
 );
 
 @mixin mq($breakpoint) {
@@ -35,7 +35,7 @@ $breakpoints: (
 }
 
 /*スマホ*/
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
     html {
         font-size: 2.666vw;
         /*
@@ -47,5 +47,5 @@ $breakpoints: (
 }
 
 // --- 余白設定 ---
-$padding_pc: 25px;
-$padding_sp: 20px;
+$padding_pc: 2.5rem;
+$padding_sp: 2rem;

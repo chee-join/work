@@ -1,0 +1,140 @@
+@use '../global/' as *;
+
+.mv .inner {
+    @include mq(tb) {
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+.mv__wrapper {
+    display: flex;
+    justify-content: space-between;
+    height: 485px;
+
+    @include mq(pc) {
+        height: 48.5rem;
+    }
+
+    @include mq(tb) {
+        flex-direction: column-reverse;
+        height: 100%;
+        text-align: center;
+    }
+}
+
+.mv__title {
+    width: 31.6%;
+    background: linear-gradient(270deg, #74C6D2, #68b0b0, #20b2aa);
+    color: #fff;
+    padding: 58px 48px 48.5px 79px;
+
+    @include mq(pc) {
+        padding: 5.8rem 4.8rem 4.85rem 6rem;
+    }
+
+    @include mq(tb) {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: -19rem;
+        background: linear-gradient(270deg, rgba(116, 198, 210, .8), rgba(104, 176, 176, .8), rgba(32, 178, 170, .8));
+        width: 83.5%;
+        padding: 1.9rem 4rem 2.3rem 4rem;
+    }
+}
+
+.mv__title-h1 {
+    font-family: "mr-eaves-modern", sans-serif;
+    font-size: 98px;
+    font-weight: 400;
+    font-style: italic;
+    line-height: calc(87 / 98);
+    letter-spacing: .1em;
+
+    @include mq(pc) {
+        font-size: 9.8rem;
+    }
+
+    @include mq(tb) {
+        font-size: 5.6rem;
+        line-height: calc(42 / 56);
+        margin-top: 0.3rem;
+    }
+}
+
+.mv__title-lead-01 {
+    font-size: 20px;
+    font-family: $YuGothic;
+    font-weight: 700;
+
+    @include mq(pc) {
+        font-size: 2rem;
+    }
+
+    @include mq(tb) {
+        font-size: 1.5rem;
+        letter-spacing: .15em;
+        line-height: calc(17 / 15);
+    }
+}
+
+.mv__title-lead-02 {
+    font-family: $YuGothic;
+    font-size: 14px;
+    font-weight: 500;
+
+    @include mq(pc) {
+        font-size: 1.1rem;
+        letter-spacing: .07em;
+        margin-top: 1.2rem;
+    }
+}
+
+.mv__title-button {
+    margin-top: 15.2px;
+    max-width: 319px;
+    border-radius: 50vh;
+    background: linear-gradient(130deg, #E65A24, #F0A53B, #F0A53B);
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    @include mq(pc) {
+        margin-top: 1.52rem;
+        max-width: 31.9rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+    @include mq(tb) {
+        margin-top: .8rem;
+    }
+
+    & a {
+        font-size: 20px;
+        color: #FFF;
+        width: 100%;
+        height: auto;
+        display: grid;
+        place-items: center;
+
+        @include mq(pc) {
+            font-size: 2rem;
+        }
+    }
+}
+
+.mv__image {
+    width: calc(100% - 31.6%);
+    height: auto;
+    overflow: hidden;
+
+    @include mq(pc) {
+        width: 100%;
+    }
+
+    & img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+}

@@ -47,10 +47,6 @@
     transform: rotate(45deg);
 }
 
-// .wrapper {
-//     padding: 50px;
-// }
-
 .line_box {
     position: relative;
     width: 300px;
@@ -125,7 +121,7 @@
         content: "";
         height: 20rem;
         width: .2rem;
-        background-color: lightseagreen;
+        background-color: #20b2aa;
         top: -20rem;
         z-index: -1;
 
@@ -379,6 +375,7 @@
     @include mq(pc) {
         border-radius: 5.3rem;
     }
+
     @include mq(tb) {
         border-radius: 2rem;
     }
@@ -475,6 +472,7 @@
         font-size: 2rem;
         margin-top: 3.41rem;
     }
+
     @include mq(tb) {
         font-size: 1.5rem;
         margin-top: 0;
