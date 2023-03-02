@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="/css/main.css">
     <script src="https://code.jquery.com/jquery-3.6.3.min.js"
         integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-migrate-3.4.0.js"></script>
     <script src="js/main.js"></script>
 </head>
 
@@ -189,7 +188,69 @@
                 <div class="js_01__text js_text">詳しくはこちら</div>
                 <div class="js_01__text-body">スライドダウンで表示するページ</div>
             </div>
+            <div class="js_02">
+                <div class="contents_title">基本のアコーディオン</div>
+                <div class="accordion__container">
+                    <dl class="accordion__list">
+                        <dt class="accordion__title js-accordion-title">タイトルその１</dt>
+                        <dd class="accordion__content">その１テキスト。その１テキスト。その１テキスト。その１テキスト。</dd>
+                    </dl>
+                    <dl class="accordion__list">
+                        <dt class="accordion__title js-accordion-title">タイトルその２</dt>
+                        <dd class="accordion__content">その２テキスト。その２テキスト。その２テキスト。その２テキスト。</dd>
+                    </dl>
+                    <dl class="accordion__list">
+                        <dt class="accordion__title js-accordion-title">タイトルその３</dt>
+                        <dd class="accordion__content">その３テキスト。その３テキスト。その３テキスト。その３テキスト。</dd>
+                    </dl>
+                </div>
+            </div>
+            <!-- タブの切り替え -->
+            <div class="js_03">
+                <div class="contents_title">タブの切り替え</div>
+                <div class="tab__wrapper">
+                    <ul class="tabs-menu">
+                        <li class="js-tab-menu active"><a href="#tabs-1">タブ1</a></li>
+                        <li class="js-tab-menu"><a href="#tabs-2">タブ2</a></li>
+                        <li class="js-tab-menu"><a href="#tabs-3">タブ3</a></li>
+                    </ul>
+                    <section class="tabs-content">
+                        <section id="tabs-1" class="js-tab-content active">
+                            <p>タブ1の内容が入ります。タブ1の内容が入ります。タブ1の内容が入ります。</p>
+                        </section>
+                        <section id="tabs-2" class="js-tab-content">
+                            <p>タブ2の内容が入ります。タブ2の内容が入ります。タブ2の内容が入ります。</p>
+                        </section>
+                        <section id="tabs-3" class="js-tab-content">
+                            <p>タブ3の内容が入ります。タブ3の内容が入ります。タブ3の内容が入ります。</p>
+                        </section>
+                    </section>
+                </div>
+            </div>
+
+            <!-- モーダルウィンドウ -->
+            <section class="js_04">
+                <div class="contents_title">モーダルウィンドウを開く</div>
+                <button id="openModal"> モーダルを開く</button>
+
+                <!-- モーダルエリアここから -->
+                <section id="modalArea" class="modalArea">
+                    <div id="modalBg" class="modalBg"></div>
+                    <div class="modal__wrapper">
+                        <div class="modal__contents">
+                            <h1>春のイチゴ祭り実施中！</h1>
+                            <p>2月20日から4月10日までの期間限定。ケーキはもちろん、焼き菓子やゼリーなど各種イチゴを使っ甘酸っぱいスイーツをご用意しています。</p>
+                        </div>
+                        <div id="closeModal" class="closeModal">×</div>
+                    </div>
+                </section>
+            </section>
         </section>
+
+        <!-- トップページに戻るボタン -->
+        <div class="js_05">
+            <div id="js-page_top" class="page_top"><a href="#"></a></div>
+        </div>
     </main>
     <footer></footer>
     <small>&copy;</small>

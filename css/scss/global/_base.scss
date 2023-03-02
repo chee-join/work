@@ -79,12 +79,19 @@ a {
 }
 
 .contents_title {
-margin: 50px auto;
-    max-width:800px;
+    margin: 50px auto;
+    max-width: 800px;
     background: linear-gradient(-35deg, lightblue 98%, transparent 0);
     color: #fff;
     padding: 10px 30px;
-    font-size: 1.8rem;
+    font-size: 18px;
+
+    @include mq(pc) {
+        font-size: 1.8rem;
+    }
+    @include mq(tb) {
+        background: linear-gradient(-35deg, lightblue 96%, transparent 0);
+    }
 }
 
 // --- 表示・非表示切り替え ---
