@@ -278,6 +278,10 @@ a {
   }
 }
 
+.sp_nav ul li a {
+  color: #fff;
+}
+
 .toggle {
   transform: translateY(0);
   opacity: 1;

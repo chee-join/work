@@ -83,14 +83,75 @@ $(function () {
     var pagetop = $('#js-page_top');
 
     $(window).scroll(function () {
-        console.log(scroll);
+
         if ($(this).scrollTop() > 100) {//100pxスクロールしたら
 
+            if (appear == false) {
+                appear = true;
+                pagetop.stop().animate({
+                    'bottom': '50px'//下から50pxの位置に
+                }, 300);//0.3秒かけて現れる
+            }
+        } else {
+            if (appear) {
+                appear = false;
+                pagetop.stop().animate({
+                    'bottom': '-50px' //下から-50pxの位置に
+                }, 300);//0.3秒かけて隠れる
+            }
         }
-
-
-
-
+    });
+    pagetop.click(function () {
+        $('body,html').animate({ scrollTop: 0 }, 500);//0.5秒かけてトップに戻る
+        return false
     });
 });
+
+//--- スムーススクロール ページ内リンク ---
+//ページ内リンクをクリックしたらスクロールさせて移動する
+$(function () {
+    $('a[href^="#"]').click(function () {
+        var adjust = -80; /* ヘッダーの高さ分だけ移動位置を調整するための調整値 */
+        var speed = 400;  /* 移動にかける時間（ミリ秒） */
+        var href = $(this).attr('href');/* クリックしたリンクのhref属性を取得 */
+
+        console.log(href);
+
+        // リンク先の指定が無い場合はページ最上部への移動とする
+        var target = $(href);
+        if (href === "#" || href === "") {
+            target = $('html');
+        }
+
+        // 移動する位置の算出
+        var position = target.offset().top + adjust;
+
+        // animateメソッドを利用してスクロールさせながらpositionの位置まで移動する
+        $('body,html').animate({scrollTop:position}, speed, "swing");
+        return false;
+    });
+});
+
+
+// $(function () {
+//     // #で始まる出発地点をクリックした場合に処理を実行
+//     $('a[href^="#"]').click(function () {
+
+//         var adjust = 100;
+
+//         // 出発地点の値を取得
+//         var href = $(this).attr("href");
+//         console.log(href);
+
+//         // 到着地点を取得
+//         var target = $(href == "#" || href == "" ? 'html' : href);
+
+//         // 到着地点を数値で取得
+//         var position = target.offset().top - adjust;
+
+//         // スムーススクロール
+//         $('body,html').animate({ scrollTop: position }, 400, 'swing');
+//         return false;
+//     });
+// });
 
