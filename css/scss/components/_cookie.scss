@@ -1,0 +1,58 @@
+@use '../global/' as *;
+.cookie-consent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+
+    font-size: 12px;
+    background: rgba(0,0,0,.7);
+    padding: 1.2em;
+    z-index: 100;
+    visibility: hidden;
+
+    @include mq(tb){
+        flex-direction: column;
+    }
+}
+
+.cookie-consent.is-show {
+    visibility: visible;
+}
+.cookie__text {
+    @include mq(tb) {
+        margin-bottom: 1em;
+    }
+}
+.cookie-consent a {
+    color: #fff;
+}
+.cookie__agree {
+    color: #fff;
+    background: dodgerblue;
+    padding: .5em 1.5em;
+}
+.cookie__agree:hover {
+    cursor: pointer;
+}
+
+/*パッと消える*/
+.cc-hide1 {
+    display: none;
+}
+/*ゆっくり消える*/
+.cc-hide2 {
+    animation: hide 1s linear 0s;
+    animation-fill-mode: forwards;
+}
+@keyframes hide {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+        visibility: hidden;
+    }
+}

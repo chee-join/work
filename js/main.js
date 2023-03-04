@@ -1,3 +1,21 @@
+//--- ローディング ---
+// クラス変更
+window.onload = function () {
+    const spinner = document.getElementById('loading');
+    spinner.classList.add('loaded');
+}
+
+//safari対策
+window.onpageshow = function (event) {
+    if (event.persisted) {
+        window.location.reload();
+    }
+};
+
+
+//--- Cookie同意JavaScript ---
+
+
 //--- 単純なヘッダー固定はCSS記述のみ(sticky) ---
 
 //--- 一定の位置までスクロールしたらヘッダー追従する ---
@@ -127,31 +145,7 @@ $(function () {
         var position = target.offset().top + adjust;
 
         // animateメソッドを利用してスクロールさせながらpositionの位置まで移動する
-        $('body,html').animate({scrollTop:position}, speed, "swing");
+        $('body,html').animate({ scrollTop: position }, speed, "swing");
         return false;
     });
 });
-
-
-// $(function () {
-//     // #で始まる出発地点をクリックした場合に処理を実行
-//     $('a[href^="#"]').click(function () {
-
-//         var adjust = 100;
-
-//         // 出発地点の値を取得
-//         var href = $(this).attr("href");
-//         console.log(href);
-
-//         // 到着地点を取得
-//         var target = $(href == "#" || href == "" ? 'html' : href);
-
-//         // 到着地点を数値で取得
-//         var position = target.offset().top - adjust;
-
-//         // スムーススクロール
-//         $('body,html').animate({ scrollTop: position }, 400, 'swing');
-//         return false;
-//     });
-// });
-

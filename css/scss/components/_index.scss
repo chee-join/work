@@ -1,7 +1,8 @@
 // ==========================================
 // componentsフォルダの_index.scss
 // ==========================================
-
+@use "loading";
+@use "cookie";
 @use "header";
 @use "mv";
 @use "body";

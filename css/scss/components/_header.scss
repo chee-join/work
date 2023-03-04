@@ -26,8 +26,12 @@
         }
 
         .pc_nav {
+
             @include mq(tb) {
                 display: none;
+            }
+            .flex {
+                gap: 25px;
             }
         }
     }
@@ -73,7 +77,6 @@
     content: '';
     display: block;
     position: absolute;
-
     height: 2px;
     background-color: #FFF;
     bottom: 0;

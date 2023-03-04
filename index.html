@@ -8,20 +8,25 @@
     <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
     <link rel="stylesheet" href="https://use.typekit.net/krc6two.css">
     <link rel="stylesheet" href="/css/main.css">
-    <script src="https://code.jquery.com/jquery-3.6.3.min.js"
-        integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
-    <script src="js/main.js"></script>
+
 </head>
 
 <body>
+
+    <!-- ローディングここから -->
+    <div id="loading">
+        <div class="loader"></div>
+    </div>
+    <!-- ローディングここまで -->
+
     <header class="header" id="js_header">
         <div class="header__inner flex">
             <h1>LOGO</h1>
             <nav class="pc_nav">
                 <ul class="flex">
-                    <li><a href="#js_01">js_01</a></li>
-                    <li><a href="#js_02">js_02</a></li>
-                    <li><a href="#js_03">js_03</a></li>
+                    <li><a href="#js_01">menu-01</a></li>
+                    <li><a href="#js_02">menu-02</a></li>
+                    <li><a href="#js_03">menu-03</a></li>
                 </ul>
             </nav>
 
@@ -40,6 +45,13 @@
         </nav>
     </header>
     <main>
+        <!-- Cookie同意ここから -->
+        <div class="cookie-consent">
+            <div class="cookie__text">当サイトではCookieを使用します。Cookieの使用に関する詳細は「<a href="#">プライバシーポリシー</a>」をご覧ください。</div>
+            <button class="cookie__agree">OK</button>
+        </div>
+        <!-- Cookie同意ここまで -->
+
         <section class="mv">
             <div class="inner">
                 <div class="mv__wrapper">
@@ -183,7 +195,7 @@
             </ul>
         </section>
         <section class="js_code inner">
-            <div  id="js_01" class="js_01">
+            <div id="js_01" class="js_01">
                 <div class="contents_title">アコーディオンの中にページを表示</div>
                 <div class="js_01__text js_text">詳しくはこちら</div>
                 <div class="js_01__text-body">スライドダウンで表示するページ</div>
@@ -253,7 +265,11 @@
         </div>
     </main>
     <footer></footer>
-    <small>&copy;</small>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"
+        integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
 
 </body>
 
