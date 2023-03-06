@@ -1,5 +1,10 @@
 @use '../global/' as *;
 
+.pie-graph {
+    margin-top: 50px;
+    text-align: center;
+}
+
 .pie__outside {
     display: flex;
     justify-content: center;
@@ -52,4 +57,51 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.pie__textArea {
+    margin: 10px auto;
+    display: inline-block;
+}
+
+.pie__item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 8.6px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.square {
+    width: 26.14px;
+    height: 14.88px;
+}
+
+.pie__item-color01 {
+    background-color: #4076B7;
+}
+
+.pie__item-color02 {
+    background-color: rgba(64, 118, 183, .7);
+}
+
+.pie__item-color03 {
+    background-color: rgba(64, 118, 183, .5);
+}
+
+.pie__item-color04 {
+    background-color: #70C4D5;
+}
+
+.pie__item-color05 {
+    background-color: #DBDCDB;
+}
+
+.pie__item-color06 {
+    background-color: #B0B0B1;
+}
+
+.pie__item-color07 {
+    background-color: #848585;
 }
