@@ -1,0 +1,55 @@
+@use '../global/' as *;
+
+.pie__outside {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: auto;
+    margin-left: auto;
+    width: 300px;
+    height: 300px;
+
+    position: relative;
+
+    &::before {
+
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 93%;
+        height: 93%;
+        border-radius: 50%;
+        background-image: conic-gradient(#4076B7 0% 15%, rgba(64, 118, 183, .7) 15% 45%, rgba(64, 118, 183, .5) 45% 71%, #70C4D5 71% 100%);
+        z-index: 3;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        background-image: radial-gradient(#fff 65%, transparent 66%), conic-gradient(#FFEE00 0% 71%, transparent 71% 100%);
+        z-index: -1;
+    }
+}
+
+.pie__text {
+    line-height: 1;
+    font-size: 26px;
+    font-weight: 700;
+    position: relative;
+    z-index: 5;
+    background-color: #fff;
+    border-radius: 50%;
+    width: 160.6px;
+    height: 160.6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
