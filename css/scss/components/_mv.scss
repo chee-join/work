@@ -84,7 +84,7 @@
     font-size: 14px;
     font-weight: 500;
 
-    @include mq(pc) {
+    @include mq(tb) {
         font-size: 1.1rem;
         letter-spacing: .07em;
         margin-top: 1.2rem;
