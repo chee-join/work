@@ -1,0 +1,55 @@
+@use '../global/' as *;
+
+.arrow__mode {
+    margin-top: 126px;
+}
+
+.arrow__mode-items {
+    display: flex;
+    justify-content: center;
+}
+
+.arrow__area {
+    width: 100px;
+    margin-right: -40px;
+    position: relative;
+    transform: rotate(90deg);
+}
+
+.arrow__text {
+    font-size: 12px;
+    line-height: calc(22 / 12);
+}
+
+.arrow__line01 {
+    height: 1px;
+    background-color: #000;
+}
+
+.arrow__line02 {
+    width: 12px;
+    height: 2px;
+    background-color: red;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    transform-origin: right bottom;
+    transform: rotate(45deg);
+}
+
+.nature-01 {
+    /*   background-color: lightgreen; */
+    color: lightgreen;
+}
+
+.nature-02 {
+    background-color: lightgreen;
+}
+
+.booth-01 {
+    color: pink;
+}
+
+.booth-02 {
+    background-color: pink;
+}

@@ -1,0 +1,144 @@
+@use '../global/' as *;
+
+.btn_wrapper {
+    max-width: 800px;
+    margin-right: auto;
+    margin-left: auto;
+
+    @include mq(tb) {
+        min-width: 80rem;
+    }
+}
+
+
+/* --- ボタン --- */
+.base_btn {
+    margin-top: 20px;
+}
+
+.base_btn a {
+    width: 300px;
+    background: skyblue;
+    padding: 1em 2em;
+    border-radius: 50vh;
+    font-size: 30px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.orange_btn a,
+.blue_btn a {
+    min-width: 500px;
+    background: linear-gradient(130deg, #E65A24, #F0A53B, #F0A53B);
+    padding: 0 2em;
+
+    @include mq(tb) {
+        min-width: 100%;
+    }
+}
+
+.blue_btn a {
+    background: linear-gradient(90deg, #4076B0, #70BDD1);
+}
+
+
+.orange_btn-large a {
+    max-width: 780px;
+    background: linear-gradient(130deg, #E65A24, #F0A53B, #F0A53B);
+    padding: 0 2em;
+    margin-right: auto;
+    margin-left: auto;
+
+    @include mq(pc) {
+        max-width: 78rem;
+    }
+
+    @include mq(tb) {
+        max-width: 28rem;
+        font-size: 2.5rem;
+    }
+}
+
+.button_01-block,
+.button_02-block,
+.button_03-block {
+    margin-top: 20px;
+}
+
+.button_01 {
+    display: inline-block;
+    cursor: pointer;
+    color: #fff;
+    background-color: #4076B0;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 24px;
+
+    @include mq(pc) {
+        padding: 1rem 2rem;
+        border-radius: 1rem;
+        font-size: 2.4rem;
+    }
+
+    @include mq(tb) {
+        font-size: 2rem;
+    }
+
+    &:hover {
+        opacity: .7;
+    }
+}
+
+.button_02 {
+    display: inline-block;
+    cursor: pointer;
+    color: #fff;
+    background-color: lightcoral;
+    padding: 10px 30px;
+    border-radius: 10px;
+    font-size: 24px;
+
+    /*0.3秒かけてeaseの動きをする(hover)*/
+    transition: transform .3s ease;
+
+    @include mq(pc) {
+        padding: 1rem 3rem;
+        border-radius: 1rem;
+        font-size: 2.4rem;
+    }
+
+    @include mq(tb) {
+        font-size: 2rem;
+    }
+
+    &:hover {
+        background: #fff;
+        border: solid 1px lightcoral;
+        color: lightcoral;
+        font-weight: bold;
+    }
+}
+
+.button_02-desc {
+    margin-top: 10px;
+    border: 2px dotted #ddd;
+    padding: 10px 40px;
+
+    ul li {
+        list-style: disc;
+    }
+}
+
+
+/*光るボタン*/
+.button_03-block {
+    display: inline-block;
+    cursor: pointer;
+    color: #fff;
+    background-color: red;
+    padding: 10px 40px;
+    border-radius: 50vh;
+
+}

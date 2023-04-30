@@ -69,8 +69,8 @@ li {
 
 a {
     text-decoration: none;
-    color: #000;
     cursor: pointer;
+    color: #fff;
 }
 
 .flex {
@@ -111,49 +111,3 @@ a {
     }
 }
 
-// --- ボタン ---
-.base_btn a {
-    width: 300px;
-    background: skyblue;
-    padding: 1em 2em;
-    border-radius: 50vh;
-    font-size: 30px;
-    font-weight: 700;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.orange_btn a,
-.blue_btn a {
-    min-width: 500px;
-    background: linear-gradient(130deg, #E65A24, #F0A53B, #F0A53B);
-    padding: 0 2em;
-
-    @include mq(tb) {
-        min-width: 100%;
-    }
-}
-
-.blue_btn a {
-    background: linear-gradient(90deg, #4076B0, #70BDD1);
-}
-
-
-.orange_btn-large a {
-    max-width: 780px;
-    background: linear-gradient(130deg, #E65A24, #F0A53B, #F0A53B);
-    padding: 0 2em;
-    margin-right: auto;
-    margin-left: auto;
-
-    @include mq(pc) {
-        max-width: 78rem;
-    }
-
-    @include mq(tb) {
-        max-width: 28rem;
-        font-size: 2.5rem;
-    }
-
-}

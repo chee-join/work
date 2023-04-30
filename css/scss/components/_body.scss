@@ -90,6 +90,69 @@
     transform: rotate(180deg);
 }
 
+// --- 直線の中央だけ三角矢印ここから---
+.line_triangle {
+    position: relative;
+    border-bottom: 2px solid #000;
+    background: lightcoral;
+    text-align: center;
+    padding: 30px 0 10px;
+    width: 500px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 20px;
+}
+
+.line_triangle::before {
+    content: "";
+    position: absolute;
+    border: 35px solid transparent;
+    border-top: 35px solid #fff;
+    z-index: 5;
+    left: 43.1%;
+    bottom: -68px;
+    z-index: 5;
+}
+
+.line_triangle::after {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border: solid 2px #000;
+    border-top-width: 0;
+    border-right-width: 0;
+    transform: rotate(315deg);
+    bottom: -25px;
+    left: 45%;
+}
+
+
+/*下三角*/
+// .line_triangle::before {
+//     content: '';
+//     position: absolute;
+//     bottom: -44px;
+//     left: 50%;
+//     margin-left: -2px;
+//     border: 22px solid transparent;
+//     border-top: 22px solid #fff;
+//     z-index: 2;
+// }
+// .line_triangle::after {
+//     content: '';
+//     position: absolute;
+//     left: 50%;
+//     bottom: -25px;
+//     border: 24px solid red;
+//     border-top-color: #000;
+//     border-bottom-width: 0;
+//     z-index: 1;
+// }
+
+
+// --- 直線の中央だけ三角矢印ここまで---
+
 .maru {
     padding-top: 2rem;
     padding-bottom: 3rem;
@@ -494,4 +557,108 @@
     margin-top: 20.6px;
     text-align: center;
     color: $blue;
+}
+
+.bg_diagonal-translate {
+    width: 500px;
+    height: 500px;
+    background: #20b2aa;
+    margin: 20px auto 0;
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        width: inherit;
+        height: inherit;
+        top: 0;
+        left: 0;
+        background: repeating-linear-gradient(45deg,
+                rgba(255, 255, 255, .02),
+                rgba(255, 255, 255, .02) 1rem,
+                rgba(255, 255, 255, .03) 1rem,
+                rgba(255, 255, 255, .03) 7rem,
+                rgba(255, 255, 255, .02) 7rem,
+                rgba(255, 255, 255, .02) 8rem,
+                transparent 8rem,
+                transparent 10.8rem);
+    }
+}
+
+.ribbon_01 {
+    display: inline-block;
+    position: relative;
+    background: lightcoral;
+    color: #fff;
+    padding: 1em;
+    text-align: center;
+    font-size: 20px;
+}
+
+.ribbon_01::before,
+.ribbon_01::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+}
+
+.ribbon_01::before {
+    right: 0;
+    bottom: -20px;
+    border-style: solid;
+    border-color: transparent transparent transparent #2F4F4F;
+    border-width: 0 0 20px 100px;
+}
+.ribbon_02-wrapper {
+display:block;
+position: relative;
+margin: 15px auto;
+padding: 10px 0;
+width: 300px;
+background: #f1f1f1;
+text-align: center;
+}
+.ribbon02 {
+    display: inline-block;
+    position: absolute;
+    top: -20px;
+    left: 10px;
+    margin: 0;
+    padding: 3px 0 12px;
+    width: 40px;
+    text-align: center;
+    font-size: 17px;
+    color: #fff;
+    background-color: #20b2aa;
+}
+
+.ribbon02::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 100%;
+    height: 0;
+    width: 0;
+    border-left: 20px solid #20b2aa;
+    border-right: 20px solid #20b2aa;
+    border-bottom: 10px solid transparent;
+}
+
+
+
+.border_wrapper {
+    margin-inline: auto;
+    border: solid 2px #20b2aa;
+    max-width:800px;
+}
+
+.border_img-wrapper {
+    // width: 800px;
+    height: 500px;
+    background-image: url(/images/office-pc.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    border: solid 10px red;
+
 }

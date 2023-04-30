@@ -16,7 +16,7 @@ body {
 /*スマホ*/
 @media screen and (max-width: 768px) {
   html {
-    font-size: 2.666vw;
+    font-size: 2.66vw;
     /*
     デザインカンプが375PX
       計算式：10(px) / 375(px) * 100 = 2.6666
@@ -85,8 +85,8 @@ li {
 
 a {
   text-decoration: none;
-  color: #000;
   cursor: pointer;
+  color: #fff;
 }
 
 .flex {
@@ -128,54 +128,6 @@ a {
 @media only screen and (max-width: 768px) {
   .sp_only {
     display: inline-block;
-  }
-}
-
-.base_btn a {
-  width: 300px;
-  background: skyblue;
-  padding: 1em 2em;
-  border-radius: 50vh;
-  font-size: 30px;
-  font-weight: 700;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.orange_btn a,
-.blue_btn a {
-  min-width: 500px;
-  background: linear-gradient(130deg, #E65A24, #F0A53B, #F0A53B);
-  padding: 0 2em;
-}
-@media only screen and (max-width: 768px) {
-  .orange_btn a,
-  .blue_btn a {
-    min-width: 100%;
-  }
-}
-
-.blue_btn a {
-  background: linear-gradient(90deg, #4076B0, #70BDD1);
-}
-
-.orange_btn-large a {
-  max-width: 780px;
-  background: linear-gradient(130deg, #E65A24, #F0A53B, #F0A53B);
-  padding: 0 2em;
-  margin-right: auto;
-  margin-left: auto;
-}
-@media only screen and (max-width: 1480px) {
-  .orange_btn-large a {
-    max-width: 78rem;
-  }
-}
-@media only screen and (max-width: 768px) {
-  .orange_btn-large a {
-    max-width: 28rem;
-    font-size: 2.5rem;
   }
 }
 
@@ -732,6 +684,43 @@ a {
   transform: rotate(180deg);
 }
 
+.line_triangle {
+  position: relative;
+  border-bottom: 2px solid #000;
+  background: lightcoral;
+  text-align: center;
+  padding: 30px 0 10px;
+  width: 500px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 20px;
+}
+
+.line_triangle::before {
+  content: "";
+  position: absolute;
+  border: 35px solid transparent;
+  border-top: 35px solid #fff;
+  z-index: 5;
+  left: 43.1%;
+  bottom: -68px;
+  z-index: 5;
+}
+
+.line_triangle::after {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border: solid 2px #000;
+  border-top-width: 0;
+  border-right-width: 0;
+  transform: rotate(315deg);
+  bottom: -25px;
+  left: 45%;
+}
+
+/*下三角*/
 .maru {
   padding-top: 2rem;
   padding-bottom: 3rem;
@@ -1155,6 +1144,153 @@ a {
   color: #4172CE;
 }
 
+.bg_diagonal-translate {
+  width: 500px;
+  height: 500px;
+  background: #20b2aa;
+  margin: 20px auto 0;
+  position: relative;
+}
+.bg_diagonal-translate::before {
+  content: "";
+  position: absolute;
+  width: inherit;
+  height: inherit;
+  top: 0;
+  left: 0;
+  background: repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.02) 1rem, rgba(255, 255, 255, 0.03) 1rem, rgba(255, 255, 255, 0.03) 7rem, rgba(255, 255, 255, 0.02) 7rem, rgba(255, 255, 255, 0.02) 8rem, transparent 8rem, transparent 10.8rem);
+}
+
+.ribbon_01 {
+  display: inline-block;
+  position: relative;
+  background: lightcoral;
+  color: #fff;
+  padding: 1em;
+  text-align: center;
+  font-size: 20px;
+}
+
+.ribbon_01::before,
+.ribbon_01::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+}
+
+.ribbon_01::before {
+  right: 0;
+  bottom: -20px;
+  border-style: solid;
+  border-color: transparent transparent transparent #2F4F4F;
+  border-width: 0 0 20px 100px;
+}
+
+.ribbon_02-wrapper {
+  display: block;
+  position: relative;
+  margin: 15px auto;
+  padding: 10px 0;
+  width: 300px;
+  background: #f1f1f1;
+  text-align: center;
+}
+
+.ribbon02 {
+  display: inline-block;
+  position: absolute;
+  top: -20px;
+  left: 10px;
+  margin: 0;
+  padding: 3px 0 12px;
+  width: 40px;
+  text-align: center;
+  font-size: 17px;
+  color: #fff;
+  background-color: #20b2aa;
+}
+
+.ribbon02::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 100%;
+  height: 0;
+  width: 0;
+  border-left: 20px solid #20b2aa;
+  border-right: 20px solid #20b2aa;
+  border-bottom: 10px solid transparent;
+}
+
+.border_wrapper {
+  margin-inline: auto;
+  border: solid 2px #20b2aa;
+  max-width: 800px;
+}
+
+.border_img-wrapper {
+  height: 500px;
+  background-image: url(/images/office-pc.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  border: solid 10px red;
+}
+
+.arrow__mode {
+  margin-top: 126px;
+}
+
+.arrow__mode-items {
+  display: flex;
+  justify-content: center;
+}
+
+.arrow__area {
+  width: 100px;
+  margin-right: -40px;
+  position: relative;
+  transform: rotate(90deg);
+}
+
+.arrow__text {
+  font-size: 12px;
+  line-height: 1.8333333333;
+}
+
+.arrow__line01 {
+  height: 1px;
+  background-color: #000;
+}
+
+.arrow__line02 {
+  width: 12px;
+  height: 2px;
+  background-color: red;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  transform-origin: right bottom;
+  transform: rotate(45deg);
+}
+
+.nature-01 {
+  /*   background-color: lightgreen; */
+  color: lightgreen;
+}
+
+.nature-02 {
+  background-color: lightgreen;
+}
+
+.booth-01 {
+  color: pink;
+}
+
+.booth-02 {
+  background-color: pink;
+}
+
 .pie-graph {
   margin-top: 50px;
   text-align: center;
@@ -1535,4 +1671,245 @@ a {
   border-color: transparent transparent rgba(255, 255, 255, 0.6) transparent;
   display: flex;
   align-items: center;
+}
+
+.bg_diagonal-gray {
+  width: 100%;
+  height: 500px;
+  background: repeating-linear-gradient(45deg, rgba(245, 245, 245, 0.44), rgba(245, 245, 245, 0.44) 45px, #f5f5f5 0, #f5f5f5 90px);
+}
+
+.carousel {
+  display: flex;
+}
+
+.c-area {
+  max-width: 1118px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 50px;
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  overflow: hidden;
+}
+
+.circle-arrow-prev,
+.circle-arrow-next {
+  position: relative;
+  vertical-align: middle;
+  display: inline-block;
+  width: 55px;
+  height: 55px;
+  background: #EBEBEB;
+  border-radius: 50%;
+  margin-top: 15%;
+  cursor: pointer;
+}
+
+.circle-arrow-prev {
+  margin-left: auto;
+}
+
+.circle-arrow-prev::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  vertical-align: middle;
+  left: 20px;
+  width: 14px;
+  height: 14px;
+  border-bottom: 3px solid #707070;
+  border-left: 3px solid #707070;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  z-index: 3;
+}
+
+.circle-arrow-next {
+  margin-right: auto;
+}
+
+.circle-arrow-next::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  vertical-align: middle;
+  left: 18px;
+  width: 14px;
+  height: 14px;
+  border-top: 3px solid #707070;
+  border-right: 3px solid #707070;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  z-index: 3;
+}
+
+.c_slide-box {
+  width: 265px;
+  height: 235px;
+}
+
+.boxColor-01 {
+  background-color: lightcoral;
+}
+
+.boxColor-02 {
+  background-color: lightblue;
+}
+
+.boxColor-03 {
+  background-color: lightseagreen;
+}
+
+.boxColor-04 {
+  background-color: lightyellow;
+}
+
+.btn_wrapper {
+  max-width: 800px;
+  margin-right: auto;
+  margin-left: auto;
+}
+@media only screen and (max-width: 768px) {
+  .btn_wrapper {
+    min-width: 80rem;
+  }
+}
+
+/* --- ボタン --- */
+.base_btn {
+  margin-top: 20px;
+}
+
+.base_btn a {
+  width: 300px;
+  background: skyblue;
+  padding: 1em 2em;
+  border-radius: 50vh;
+  font-size: 30px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.orange_btn a,
+.blue_btn a {
+  min-width: 500px;
+  background: linear-gradient(130deg, #E65A24, #F0A53B, #F0A53B);
+  padding: 0 2em;
+}
+@media only screen and (max-width: 768px) {
+  .orange_btn a,
+  .blue_btn a {
+    min-width: 100%;
+  }
+}
+
+.blue_btn a {
+  background: linear-gradient(90deg, #4076B0, #70BDD1);
+}
+
+.orange_btn-large a {
+  max-width: 780px;
+  background: linear-gradient(130deg, #E65A24, #F0A53B, #F0A53B);
+  padding: 0 2em;
+  margin-right: auto;
+  margin-left: auto;
+}
+@media only screen and (max-width: 1480px) {
+  .orange_btn-large a {
+    max-width: 78rem;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .orange_btn-large a {
+    max-width: 28rem;
+    font-size: 2.5rem;
+  }
+}
+
+.button_01-block,
+.button_02-block,
+.button_03-block {
+  margin-top: 20px;
+}
+
+.button_01 {
+  display: inline-block;
+  cursor: pointer;
+  color: #fff;
+  background-color: #4076B0;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: 24px;
+}
+@media only screen and (max-width: 1480px) {
+  .button_01 {
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    font-size: 2.4rem;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .button_01 {
+    font-size: 2rem;
+  }
+}
+.button_01:hover {
+  opacity: 0.7;
+}
+
+.button_02 {
+  display: inline-block;
+  cursor: pointer;
+  color: #fff;
+  background-color: lightcoral;
+  padding: 10px 30px;
+  border-radius: 10px;
+  font-size: 24px;
+  /*0.3秒かけてeaseの動きをする(hover)*/
+  transition: transform 0.3s ease;
+}
+@media only screen and (max-width: 1480px) {
+  .button_02 {
+    padding: 1rem 3rem;
+    border-radius: 1rem;
+    font-size: 2.4rem;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .button_02 {
+    font-size: 2rem;
+  }
+}
+.button_02:hover {
+  background: #fff;
+  border: solid 1px lightcoral;
+  color: lightcoral;
+  font-weight: bold;
+}
+
+.button_02-desc {
+  margin-top: 10px;
+  border: 2px dotted #ddd;
+  padding: 10px 40px;
+}
+.button_02-desc ul li {
+  list-style: disc;
+}
+
+/*光るボタン*/
+.button_03-block {
+  display: inline-block;
+  cursor: pointer;
+  color: #fff;
+  background-color: red;
+  padding: 10px 40px;
+  border-radius: 50vh;
 }
