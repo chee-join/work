@@ -63,7 +63,8 @@
 
 .button_01-block,
 .button_02-block,
-.button_03-block {
+.button_03-block,
+.button_04-block {
     margin-top: 20px;
 }
 
@@ -140,5 +141,15 @@
     background-color: red;
     padding: 10px 40px;
     border-radius: 50vh;
+}
 
+/*斜めレイアウト、hoverで影付き*/
+.button_04 {
+    display: inline-block;
+    cursor: pointer;
+    color: #fff;
+    background-color: #000;
+    border: solid 4px #000;
+    padding: 10px 20px;
+    font-size: 20px;
 }
