@@ -1,0 +1,141 @@
+@use '../global/' as *;
+
+// --- お問い合わせフォーム ---
+
+.contact__wrapper {
+    padding: 30px 0;
+    font-size: 16px;
+}
+
+.contact__inner {
+    max-width: 700px;
+    padding: 0 30px;
+    margin: 0 auto;
+}
+
+.contact__lead {
+    margin-bottom: 5rem;
+}
+
+/*input,textareaのリセット*/
+input,
+textarea {
+    resize: none;
+    appearance: none;
+    -webkit-appearance: none;
+    outline: none;
+    border: none;
+    width: 100%;
+}
+
+.form__item {
+    margin-bottom: 4rem;
+}
+
+.form__item-title {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.required {
+    display: inline-block;
+    background-color: #333;
+    color: #fff;
+    font-size: 12px;
+    padding: 0 5px;
+    margin-left: 6px;
+}
+
+// ラジオボタンの横並び
+.inquiry__type-list {
+    display: flex;
+    align-items: center;
+}
+
+.inquiry__type-item {
+    margin-right: 5rem;
+}
+
+.radio-btn {
+    width: 20px;
+    height: 20px;
+    border: solid 1px #333;
+    border-radius: 50%;
+    /*上下の位置調整*/
+    vertical-align: -4px;
+}
+
+.radio-btn:checked {
+    background-color: #333;
+    border: 4px solid #fff;
+    box-shadow: 0 0 0 1px #333;
+}
+
+.radio-btn:hover,
+.submit-btn:hover {
+    cursor: pointer;
+}
+
+.text-box {
+    border: solid 1px #333;
+    color: #333;
+    padding: 10px;
+    width: 100%;
+    display: block;
+}
+
+.textarea {
+    border: solid 1px #333;
+    color: #333;
+    padding: 10px;
+}
+
+.privacy-policy__title {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+
+.privacy-policy__detail {
+    padding: 10px;
+    height: 230px;
+    border: 1px solid #333;
+    overflow: scroll;
+    margin-bottom: 40px;
+}
+
+.confirm {
+    text-align: center;
+}
+
+.checkbox {
+    width: 18px;
+    height: 18px;
+    border: solid 1px #333;
+    margin-right: 8px;
+    vertical-align: -3px;
+}
+
+.checkbox:checked {
+    background-image: url(/images/icon_check.svg);
+    background-size: 14px;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.submit-btn {
+    color: #fff;
+    background-color: #333;
+    width: 160px;
+    line-height: 36px;
+    font-size: 12px;
+    display: block;
+    text-align: center;
+    font-weight: bold;
+    margin: 40px auto 0;
+}
+
+.submit-btn:hover {
+    opacity: .8;
+    transition: .3s;
+}

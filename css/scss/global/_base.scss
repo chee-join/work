@@ -73,6 +73,12 @@ a {
     color: #fff;
 }
 
+img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
 .flex {
     display: flex;
     justify-content: space-between;

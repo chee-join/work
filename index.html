@@ -7,6 +7,7 @@
     <title>★★★TEST</title>
     <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
     <link rel="stylesheet" href="https://use.typekit.net/krc6two.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
     <link rel="stylesheet" href="/css/main.css">
 
 </head>
@@ -144,7 +145,8 @@
             <div class="sp_only sp-note__contents">
                 <div class="sp-note__contents-title">実証実験の監修者による見解</div>
                 <div class="sp-note__wrapper">
-                    <p>これからのオフィスは、単なる作業を行う場所ではなく、個人と組織の力を引き出す場所であるべきだと思います。ゾーニングをフレキシブルに変化させることで、オフィスワーカーが選ぶワークスペースも変化する可能性が高まります。ワークスペースが固定化されないことによって偶然の出会いが増え、コミュニケーションの活性化が期待できます。さらにバラエティに富んだ執務環境がオフィスワーカーのワーク・エンゲージメントを高める可能性もあります。
+                    <p>
+                        これからのオフィスは、単なる作業を行う場所ではなく、個人と組織の力を引き出す場所であるべきだと思います。ゾーニングをフレキシブルに変化させることで、オフィスワーカーが選ぶワークスペースも変化する可能性が高まります。ワークスペースが固定化されないことによって偶然の出会いが増え、コミュニケーションの活性化が期待できます。さらにバラエティに富んだ執務環境がオフィスワーカーのワーク・エンゲージメントを高める可能性もあります。
                     </p>
                     <p class="sp-note__wrapper-annotation">※</p>
                 </div>
@@ -164,25 +166,37 @@
         </section>
 
         <section class="inner">
+            <div class="contents_title">下線の種類</div>
+            <div class="underline__wrapper">
+                <div class="underline__block-01">linear-gradientでアンダーライン</div>
+            </div>
+            <div class="underline__wrapper">
+                <div class="underline__block-02">border-bottomでアンダーライン</div>
+            </div>
+            <div class="underline__wrapper">
+                <div class="underline__block-03">文字とアンダーラインの間に余白</div>
+            </div>
+            <div class="underline__wrapper">
+                <div class="underline__block-04">疑似要素を指定し中央に短く</div>
+            </div>
+        </section>
+
+        <section class="inner">
+            <div class="contents_title">点線の書き方</div>
+            <div class="dottedLine__01 dottedLine-box">ボーダーで点線<br>線分の調整ができない</div>
+            <div class="dottedLine__02 dottedLine-box">linear-gradientで上だけ点線<br>線分の調整が可能</div>
+            <div class="dottedLine__03 dottedLine-box">linear-gradientで下だけ点線<br>線分の調整が可能</div>
+            <div class="dottedLine__04 dottedLine-box">linear-gradientで右だけ点線<br>線分の調整が可能</div>
+            <div class="dottedLine__05 dottedLine-box">linear-gradientで左だけ点線<br>線分の調整が可能</div>
+            <p>参考URL https://tecktoppa.com/staff-blog/375/</p>
+        </section>
+
+        <section class="inner">
             <div class="contents_title">ボタンの種類</div>
             <div class="btn_wrapper">
-                <div class="base_btn">
-                    <a href="#">角丸ボタン</a>
-                </div>
-                <div class="base_btn orange_btn">
-                    <a href="#">カタログダウンロード</a>
-                </div>
-                <div class="base_btn orange_btn-large">
-                    <a href="#">お問い合わせ</a>
-                </div>
-                <div class="base_btn blue_btn ">
-                    <a href="#">角丸ボタン</a>
-                </div>
-
                 <div class="button_01-block">
                     <a href="#" class="button_01">Button_01</a>
                 </div>
-
                 <div class="button_02-block">
                     <a href="#" class="button_02" target="_blank" rel="noopener noreferrer">Button_02</a>
                     <div class="button_02-desc">
@@ -191,15 +205,12 @@
                             <li>aタグにtarget="_blank"を追加</li>
                             <li>aタグにrel="noopener noreferrer"を追加</li>
                             <li>参考URL https://junpei-sugiyama.com/target-blank/</li>
-
                         </ul>
                     </div>
                 </div>
-
                 <div class="button_03-block">
                     <a href="#" class="button_03">Button_03</a>
                 </div>
-
                 <div class="button_04-block">
                     <a href="#" class="button_04">
                         <span>Button_04</span>
@@ -207,53 +218,40 @@
                         <img class="icon_02" src="/images/icon_02.png" alt="">
                     </a>
                 </div>
-
             </div>
         </section>
 
-        <section class="card inner">
-            <ul class="card__ul">
-                <li class="card__wrapper">
-                    <a href="">
-                        <div class="card_haikei">
-                            <div class="card__title">POINT<span class="card__title-span">01</span></div>
-                            <img class="card__point-img01" src="/images/point01.png" alt="光と音の環境ゾーニング">
-                            <p class="card__text">Well-Beingな<br>オフィスを実現する<br>光と音の環境ゾーニング</p>
-                            <div class="card__arrow-text">
-                                <div class="arrow-text pc_only">MORE</div>
-                                <div class="arrow_bottom"></div>
-                            </div>
-                        </div>
-                    </a>
-                </li>
-                <li class="card__wrapper">
-                    <a href="">
-                        <div class="card_haikei">
-                            <div class="card__title">POINT<span class="card__title-span">01</span></div>
-                            <img class="card__point-img01" src="/images/point01.png" alt="光と音の環境ゾーニング">
-                            <p class="card__text">Well-Beingな<br>オフィスを実現する<br>光と音の環境ゾーニング</p>
-                            <div class="card__arrow-text">
-                                <div class="arrow-text pc_only">MORE</div>
-                                <div class="arrow_bottom"></div>
-                            </div>
-                        </div>
-                    </a>
-                </li>
-                <li class="card__wrapper">
-                    <a href="">
-                        <div class="card_haikei">
-                            <div class="card__title">POINT<span class="card__title-span">01</span></div>
-                            <img class="card__point-img01" src="/images/point01.png" alt="光と音の環境ゾーニング">
-                            <p class="card__text">Well-Beingな<br>オフィスを実現する<br>光と音の環境ゾーニング</p>
-                            <div class="card__arrow-text">
-                                <div class="arrow-text pc_only">MORE</div>
-                                <div class="arrow_bottom"></div>
-                            </div>
-                        </div>
-                    </a>
-                </li>
-            </ul>
+        <!-- カード型レイアウト -->
+        <section class="carLayout_ inner">
+            <div class="contents_title">カード型レイアウト</div>
+            <div class="parent">
+                <div class="child">
+                    <div class="grandchild-image"><img src="/images/img1.jpg" alt="手乗りの子猫"></div>
+                    <p class="grandchild-title">手乗りの子猫</p>
+                    <p class="grandchild-text">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                    <time class="grandchild-time">2023.5.1</time>
+                </div>
+                <div class="child">
+                    <div class="grandchild-image"><img src="/images/img2.jpg" alt="上目使いの黒猫"></div>
+                    <p class="grandchild-title">上目使いの黒猫</p>
+                    <p class="grandchild-text">テキストテキストテキストテキスト</p>
+                    <time class="grandchild-time">2023.5.15</time>
+                </div>
+                <div class="child">
+                    <div class="grandchild-image"><img src="/images/img3.jpg" alt="フレンチブルドッグ"></div>
+                    <p class="grandchild-title">フレンチブルドッグ</p>
+                    <p class="grandchild-text">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                    <time class="grandchild-time">2023.5.31</time>
+                </div>
+            </div>
+            <ul class="carLayout__desc">
+                <li>・フレックスボックスを利用すると、子要素の一番最初の要素の高さは揃う</li>
+                <li>・childクラス（子要素）の要素の並び順にflex-direction:columnを使用する</li>
+                <li>・" flex-grow: 1;"<br>孫クラスのgrandchild-text。テキストにより高さがばらばらになる要素に指定する。</li>
+                </ul>
+
         </section>
+
         <!-- 円グラフ -->
         <section class="pie-graph inner">
             <div class="pie__outside">
@@ -300,7 +298,6 @@
                     <p>0%</p>
                 </div>
             </div>
-
         </section>
 
         <!-- jQuery -->
@@ -370,28 +367,40 @@
 
             <!-- カルーセルスライダーここから -->
             <section class="js_06">
-                <div class="contents_title">カルーセルスライダー</div>
-                <div class="carousel bg_diagonal-gray">
-                    <button class="circle-arrow-prev"></button>
-                    <ul class="c-area">
-                        <li class="c-slider">
-                            <div class="c_slide-box boxColor-01">1</div>
-                        </li>
-                        <li class="c-slider">
-                            <div class="c_slide-box boxColor-02">2</div>
-                        </li>
-                        <li class="c-slider">
-                            <div class="c_slide-box boxColor-03">3</div>
-                        </li>
-                        <li class="c-slider">
-                            <div class="c_slide-box boxColor-04">4</div>
-                        </li>
-                    </ul>
-                    <button class="circle-arrow-next"></button>
+                <div class="contents_title">swiperでカルーセルスライダー</div>
+                <div class="bg_diagonal-gray">
+                    <div class="arrow_area">
+                        <div class="arrow-left js-button-next"></div>
+                        <div class="arrow-right js-button-back"></div>
+                    </div>
+
+                    <div class="swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="slide_box">スライド1</div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="slide_box">スライド2</div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="slide_box">スライド3</div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="slide_box">スライド4</div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="slide_box">スライド5</div>
+                            </div>
+                        </div>
+                    </div>
+                    <p>swiper:headタグと/body</p>
+                    <div class="swiper-pagination"></div>
                 </div>
             </section>
             <!-- カルーセルスライダーここまで -->
         </section>
+
+
         <div class="bg_diagonal-pattern">
             <div class="contents_title">背景を重ねて透過で模様を付ける</div>
             <div class="bg_diagonal-translate">
@@ -407,6 +416,11 @@
                 <span class="ribbon02">02</span>
                 <div>
                     <p>Ribbon-02 縦向きリボンを作る</p>
+                </div>
+            </div>
+            <div class="ribbon_03-wrapper">
+                <div class="ribbon_03">
+                    変則的な折り返しデザイン
                 </div>
             </div>
 
@@ -442,12 +456,130 @@
                     </div>
                     <div class="layout_01-box">
                         <div class="layout_01-price">
-                            <span class="font-red">5</span>円/L&nbsp;引き<img class="layout_01-img02" src="/images/gasolin.png" alt="ガソリンアイコン">
+                            <span class="font-red">5</span>円/L&nbsp;引き<img class="layout_01-img02"
+                                src="/images/gasolin.png" alt="ガソリンアイコン">
                         </div>
                     </div>
                 </div>
             </div>
+        </section>
 
+        <section class="contact">
+            <div class="contents_title">問い合わせフォームのマークアップ</div>
+
+            <div class="contact__wrapper">
+                <div class="contact__inner">
+                    <p>参考URL https://catnose.me/learning/html/label</p>
+                    <p>参考URL https://pengi-n.co.jp/blog/coding-practice3-commentary/</p>
+                    <p class="contact__lead">
+                        ご依頼やご相談についてのご質問やご要望がありましたら、下記のお問い合わせフォームよりお気軽にお問い合わせください。担当者より内容を確認の上、折り返しご連絡させていただきます。</p>
+
+                    <form action="#">
+                        <ul class="form__list">
+                            <!-- ラジオボタン選択 -->
+                            <li class="form__item">
+                                <div class="form__item-title">お問い合わせ種別<span class="required">必須</span></div>
+                                <ul class="inquiry__type-list">
+                                    <li class="inquiry__type-item">
+                                        <input type="radio" class="radio-btn" name="inquiry__type" id="request" checked>
+                                        <label for="request">制作依頼</label>
+                                    </li>
+                                    <li class="inquiry__type-item">
+                                        <!-- idfとforの値を一緒にするとラジオボタンを選択したときにチェックが入る -->
+                                        <input type="radio" class="radio-btn" name="inquiry__type" id="recruit">
+                                        <label for="recruit">採用</label>
+                                    </li>
+                                    <li class="inquiry__type-item">
+                                        <input type="radio" class="radio-btn" name="inquiry__type" id="ir">
+                                        <label for="ir">IR</label>
+                                    </li>
+                                    <li class="inquiry__type-item">
+                                        <input type="radio" class="radio-btn" name="inquiry__type" id="other">
+                                        <label for="other">その他</label>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <!-- 記述回答 -->
+                            <!-- inputのidとlabelのforの値を同じにする -->
+                            <li class="form__item">
+                                <div class="form__item-title">
+                                    <label for="company-name">会社名・団体名</label>
+                                </div>
+                                <input type="text" class="text-box" id="company-name">
+
+                            </li>
+
+                            <li class="form__item">
+                                <div class="form__item-title">
+                                    <label for="name">お名前</label>
+                                    <span class="required">必須</span>
+                                </div>
+                                <input type="text" class="text-box" id="name">
+                            </li>
+
+                            <li class="form__item">
+                                <div class="form__item-title">
+                                    <label for="email">メールアドレス</label>
+                                    <span class="required">必須</span>
+                                </div>
+                                <input type="email" class="text-box" id="email">
+                            </li>
+
+                            <li class="form__item">
+                                <div class="form__item-title">
+                                    <label for="tel">電話番号</label>
+                                </div>
+                                <input type="text" class="text-box" id="tel">
+                            </li>
+
+                            <li class="form__item">
+                                <div class="form__item-title">
+                                    <label for="detail">お問い合わせ内容</label>
+                                    <span class="required">必須</span>
+                                </div>
+                                <textarea name="" cols="30" rows="10" id="detail" class="textarea"></textarea>
+                            </li>
+                        </ul>
+
+                        <p class="privacy-policy__title">Privacy policy</p>
+                        <div class="privacy-policy__wrapper">
+                            <p class="privacy-policy__detail">
+                                個人情報保護方針<br>
+                                株式会社DDD（以下、当社）では、個人情報の重要性を認識し、以下の基準に従って、適切な管理、保護に努めます。<br><br>
+
+                                1.個人情報の収集、利用<br>
+                                当社では、お客様との取引、サービスの提供のために個人情報を適法に収集し、収集した目的の範囲内で、個人情報を利用いたします。<br><br>
+
+                                2.個人情報の第三者への開示と提供<br>
+                                収集したお客様の個人情報は、法的な要請等によらない限り、お客様の承諾を得ない第三者に対して提供・開示はいたしません。<br>
+                                業務の都合上、業務委託先に個人情報を提供する場合は、機密保持契約等によって業務委託先に個人情報保護を義務付けるとともに、業務委託先が適切に個人情報を取り扱うように管理いたします。<br><br>
+
+                                3.個人情報の保護<br>
+                                当社では、個人情報の紛失、破壊、改ざん、不正アクセス、および漏えい等を防止するため、適切な対策を行います。<br><br>
+
+                                4.法令および関連規範の遵守<br>
+                                当社は、個人情報の取り扱いに関して、個人情報保護法をはじめとする個人情報に関する法令および関連する規範を遵守します。<br><br>
+
+                                5.個人情報の開示・訂正・削除<br>
+                                当社では、個人情報の開示・訂正・削除等の依頼があった場合、情報提供者本人であることを確認の上、すみやかに対応いたします。<br><br>
+
+                                法令や当社方針により、プライバシー・ポリシーを予告なく改訂することがあります。<br><br>
+
+                                お問い合わせ窓口<br>
+                                当社の個人情報の取扱いに関するお問い合わせは下記までご連絡お願いいたします。
+                            </p>
+                        </div>
+                        <p class="confirm">
+                            <input type="checkbox" class="checkbox" id="check">
+                            <label for="check">個人情報の取り扱いについて同意のうえ送信します。</label>
+                        </p>
+                        <div class="btn-wrapper">
+                            <input type="submit" value="送信する" class="submit-btn">
+                        </div>
+                    </form>
+                </div>
+            </div>
         </section>
 
 
@@ -461,6 +593,7 @@
 
     <script src="https://code.jquery.com/jquery-3.6.3.min.js"
         integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script src="js/main.js"></script>
 
 </body>

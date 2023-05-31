@@ -125,6 +125,28 @@ $(function () {
     });
 });
 
+
+//--- js_06 swiperでスライダー ---
+const swiper = new Swiper (".swiper", {
+    autoplay: true,
+    slidesPerView: 1.5,
+    spaceBetween: 10,
+    loop:true,
+    speed:1200,
+    centeredSlides: true,
+});
+
+$('.js-button-back').click(function () {
+    console.log('back');
+    swiper.slidePrev();
+});
+
+$('.js-button-next').click(function () {
+    console.log('next');
+    swiper.slideNext();
+});
+
+
 //--- スムーススクロール ページ内リンク ---
 //ページ内リンクをクリックしたらスクロールさせて移動する
 $(function () {
@@ -149,5 +171,3 @@ $(function () {
         return false;
     });
 });
-
-//--- js_06 カルーセルスライダー ---

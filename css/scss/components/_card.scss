@@ -1,0 +1,56 @@
+@use '../global/' as *;
+
+.carLayout {
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+}
+
+.parent {
+    max-width: 980px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.child {
+    width: calc(100% / 3 - 40px * 2 / 3);
+    display: flex;
+    flex-direction: column;
+    border: solid 1px #333;
+    border-radius: 4px;
+}
+
+// .grandchild-image {
+// }
+
+.grandchild-title {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 700;
+}
+.grandchild-text {
+    margin-top: 20px;
+    font-size: 16px;
+    /*要素の高さを揃えてくれる*/
+    flex-grow: 1;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.grandchild-time {
+    text-align: right;
+    font-size: 14px;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+}
+
+.carLayout__desc {
+    max-width: 980px;
+    margin: 20px auto;
+    background-color: aliceblue;
+    border-radius: 10px;
+    padding: 16px;
+}

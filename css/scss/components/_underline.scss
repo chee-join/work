@@ -1,0 +1,69 @@
+@use '../global/' as *;
+
+/*--- アンダーラインの種類 ---*/
+.underline__wrapper {
+    display: block;
+    max-width: 600px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.underline__block-01 {
+    font-size: 30px;
+    display: inline-block;
+    background: linear-gradient(transparent calc(100% - 10px), #f940bc calc(100% - 10px));
+}
+
+.underline__block-02 {
+    margin-top: 24px;
+    display: inline-block;
+    font-size: 30px;
+    font-weight: bold;
+    border-bottom: solid 1px #000;
+}
+
+.underline__block-03 {
+    margin-top: 24px;
+    display: inline-block;
+    padding-bottom: 16px;
+    background: linear-gradient(transparent calc(100% - 2px), #f940bc calc(100% - 2px));
+}
+
+.underline__block-04 {
+    display: inline-block;
+    margin-top: 24px;
+    font-size: 30px;
+    font-weight: bold;
+    position: relative;
+
+    &::after {
+        content: '';
+        position: absolute;
+        width: 108px;
+        height: 2px;
+        background-color: #000;
+        bottom: -10px;
+        left: 50%;
+        transform: translate(-50%);
+    }
+}
+
+/*--- 点線の書き方 ---*/
+.dottedLine-box {
+    max-width: 600px;
+    height: 60px;
+    margin: 20px auto 0;
+    padding: 10px;
+    font-size: 2rem;
+}
+
+.dottedLine__01 {
+    border: dotted 2px lightseagreen;
+}
+
+.dottedLine__02 {
+    background-size: 6px 2px;
+    background-image: linear-gradient(to right, lightcoral, lightcoral 2px, transparent 2px);
+    background-repeat: repeat-x;
+    background-position: left top;
+}

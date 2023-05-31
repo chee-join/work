@@ -6,7 +6,7 @@
     margin-left: auto;
 
     @include mq(tb) {
-        min-width: 80rem;
+        max-width: 80rem;
     }
 }
 
@@ -145,11 +145,51 @@
 
 /*斜めレイアウト、hoverで影付き*/
 .button_04 {
-    display: inline-block;
+    max-width: 330px;
     cursor: pointer;
-    color: #fff;
-    background-color: #000;
-    border: solid 4px #000;
-    padding: 10px 20px;
-    font-size: 20px;
+    background: linear-gradient(125deg, #fffacd 0%, #fffacd 12%, #40e0d0 12%, #40e0d0 100%);
+    border: solid 2px #40e0d0;
+    padding: 16px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform .5s ease;
+
+    @include mq(pc) {
+        max-width: 33rem;
+        padding: 1.6rem 2.4rem;
+    }
+
+    span {
+        font-size: 20px;
+        color: #fff;
+        line-height: 1;
+
+        @include mq(pc) {
+            font-size: 2rem;
+        }
+
+        @include mq(tb) {
+            font-size: 1.6rem;
+        }
+    }
+
+    .icon_01 {
+        display: inline-block;
+        width: 16px;
+        height: 22px;
+        margin-left: 7.2px;
+    }
+
+    .icon_02 {
+        display: inline-block;
+        width: 19px;
+        height: 12px;
+        margin-left: 14px;
+    }
+
+    &:hover {
+        box-shadow: 4px 6px 0 rgba(0, 0, 0, .12);
+        transition: transform .5s ease;
+    }
 }
