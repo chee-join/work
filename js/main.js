@@ -146,6 +146,31 @@ $('.js-button-next').click(function () {
     swiper.slideNext();
 });
 
+//--- js_07 スクロールアニメーション ---
+$(function() {
+    $(window).scroll(function(){
+
+        /*.js_07-fadeinクラスがついた要素を１つずつ順番に行う*/
+        $('.js_07-fadein').each(function(){
+
+            /*画面左上からHTML要素までの距離*/
+            var position = $(this).offset().top;
+
+            /*画面をスクロールした時のスクロール量*/
+            var scroll = $(window).scrollTop();
+
+            /*ウィンドウの高さを指定*/
+            var windowHeight = $(window).height();
+
+
+            /*ページの最上部から要素までの距離からウィンドウの高さを超えたとき*/
+            if (scroll > position - windowHeight + 200) {
+                $(this).addClass('active');
+            }
+        });
+    });
+});
+
 
 //--- スムーススクロール ページ内リンク ---
 //ページ内リンクをクリックしたらスクロールさせて移動する

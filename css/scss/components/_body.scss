@@ -6,8 +6,91 @@
     margin-left: auto;
     margin-right: auto;
     background-color: rgb(212, 242, 242);
-    height: 300px;
+    height: auto;
     padding: 50px;
+}
+
+.skew {
+    margin: 20px auto;
+    max-width: 1480px;
+}
+
+.skew.flex {
+    justify-content: flex-start;
+    gap: 4.2rem;
+}
+
+.box_skew01 {
+    width: 160px;
+    height: auto;
+    padding: 20px 0;
+    background-color: #00FBFF;
+    transform: skew(-45deg);
+    text-align: center;
+    font-size: 18px;
+    box-shadow: 10px 6px 0px 0px #4172CE;
+}
+
+.box_skew02 {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    margin: 0 auto;
+    width: 160px;
+    padding: 20px 0;
+    font-size: 18px;
+}
+
+.box_skew02::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #20b2aa;
+    transform: skew(-45deg);
+}
+
+.skew_nav {
+    margin-top: 60px;
+    display: flex;
+}
+
+.skew_list {
+    text-align: center;
+}
+
+.skew_list a {
+    position: relative;
+    font-size: 16px;
+    padding: 10px 20px;
+    z-index: 1;
+}
+
+.skew_list a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    background-color: #092db1;
+    transform: skew(-45deg);
+}
+
+.skew_list:nth-child(odd) a::before {
+    background-color: #1049bd;;
+}
+
+.skew_list a:hover::before {
+    background-color: #de5901;
+}
+
+.skew_note {
+    margin-top: 20px;
 }
 
 .arrowArea {
@@ -489,6 +572,7 @@
     font-size: 20px;
     width: 300px;
 }
+
 .ribbon_03::after {
     content: "";
     width: 0;

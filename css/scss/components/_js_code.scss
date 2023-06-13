@@ -378,3 +378,23 @@
 .swiper-pagination-bullet-active {
     background-color: #FF656D;
 }
+
+// --- js_07 スクロールアニメーション ---
+.js_07-wrapper {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/*cssで動きを指定*/
+/*透明度を０にして位置を１００px下げる*/
+.js_07-fadein {
+    opacity: 0;
+    transform: translate (0,100px);
+    transition: all 3s;
+}
+
+/*.activeがついたら透明度を1にして位置を元の場所に戻す*/
+.js_07-fadein.active {
+    opacity: 1;
+    transform: translate (0,0);
+}

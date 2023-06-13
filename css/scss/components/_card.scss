@@ -11,6 +11,10 @@
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
+
+    @include mq(tb) {
+        flex-direction: column;
+    }
 }
 
 .child {
@@ -19,10 +23,16 @@
     flex-direction: column;
     border: solid 1px #333;
     border-radius: 4px;
+
+    @include mq(tb) {
+        width: 80%;
+        margin: 20px auto;
+    }
 }
 
-// .grandchild-image {
-// }
+.child:first-child {
+    margin-top: 0;
+}
 
 .grandchild-title {
     margin-top: 20px;
@@ -30,6 +40,7 @@
     font-size: 20px;
     font-weight: 700;
 }
+
 .grandchild-text {
     margin-top: 20px;
     font-size: 16px;
@@ -53,4 +64,9 @@
     background-color: aliceblue;
     border-radius: 10px;
     padding: 16px;
+
+    & li {
+        font-size: 1.6rem;
+    }
+
 }

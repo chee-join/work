@@ -87,6 +87,24 @@
             </div>
 
         </section>
+
+        <section class="skew inner">
+            <div class="flex">
+                <div class="box_skew01">平行四辺形①</div>
+                <div class="box_skew02">平行四辺形①</div>
+            </div>
+            <ul class="skew_nav">
+                <li class="skew_list"><a href="#">skew-01</a></li>
+                <li class="skew_list"><a href="#">skew-01</a></li>
+                <li class="skew_list"><a href="#">skew-01</a></li>
+                <li class="skew_list"><a href="#">skew-01</a></li>
+                <li class="skew_list"><a href="#">skew-01</a></li>
+            </ul>
+            <div class="skew_note">参考URLhttps://design-remarks.com/parallelogram-css/<br>
+            疑似要素にskewを指定する。(文字も斜めになるため)</div>
+        </section>
+
+
         <div class="line_triangle">直線の中央だけ三角矢印</div>
         <section class="arrow__wrapper">
             <div class="arrow__mode">
@@ -228,7 +246,8 @@
                 <div class="child">
                     <div class="grandchild-image"><img src="/images/img1.jpg" alt="手乗りの子猫"></div>
                     <p class="grandchild-title">手乗りの子猫</p>
-                    <p class="grandchild-text">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                    <p class="grandchild-text">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                    </p>
                     <time class="grandchild-time">2023.5.1</time>
                 </div>
                 <div class="child">
@@ -248,7 +267,7 @@
                 <li>・フレックスボックスを利用すると、子要素の一番最初の要素の高さは揃う</li>
                 <li>・childクラス（子要素）の要素の並び順にflex-direction:columnを使用する</li>
                 <li>・" flex-grow: 1;"<br>孫クラスのgrandchild-text。テキストにより高さがばらばらになる要素に指定する。</li>
-                </ul>
+            </ul>
 
         </section>
 
@@ -296,6 +315,18 @@
                 <div class="kakko">
                     <p class="kakko_01">不満率</p>
                     <p>0%</p>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="css__anima inner">
+            <div class="contents_title">CSSアニメーション フェードインで背景画像の切り替え</div>
+            <div class="css__slide-wrapper">
+                <div class="css__slide">
+                    <div class="css__img"></div>
+                    <div class="css__img"></div>
+                    <div class="css__img"></div>
                 </div>
             </div>
         </section>
@@ -398,17 +429,19 @@
                 </div>
             </section>
             <!-- カルーセルスライダーここまで -->
+
+            <!-- スクロールアニメーションここまで -->
+            <section class="js_07">
+                <div class="contents_title">スクロールアニメーション スクロールすると表示</div>
+
+                <div class="js_07-wrapper">
+                    <img src="/images/img1.jpg" alt="手乗りの子猫" class="js_07-fadein">
+                </div>
+            </section>
+            <!-- スクロールアニメーションここまで -->
         </section>
 
-
-        <div class="bg_diagonal-pattern">
-            <div class="contents_title">背景を重ねて透過で模様を付ける</div>
-            <div class="bg_diagonal-translate">
-                鍵括弧をつけるには
-            </div>
-        </div>
-
-        <section class="ribbon_pattern">
+        <section class="ribbon_pattern inner">
             <!-- https://saruwakakun.com/html-css/reference/ribbon -->
             <div class="contents_title">リボン</div>
             <div class="ribbon_01">Ribbon-01 リボンで見出しを作る</div>
@@ -426,9 +459,9 @@
 
         </section>
 
-        <section class="border_pattern">
+        <section class="border_pattern inner">
             <div class="contents_title">枠線のパターン</div>
-            <div class="border_wrapper">
+            <div class="border_wrapper js_07-fadein">
                 <div class="border_img-wrapper">
 
                 </div>
@@ -436,7 +469,7 @@
         </section>
 
         <!-- レイアウト復習positionとz-index -->
-        <section class="layout_style">
+        <section class="layout_style inner">
             <div class="contents_title">レイアウトのパターン</div>
             <div class="layout_01">
                 <div class="layout_01-header">
@@ -464,7 +497,7 @@
             </div>
         </section>
 
-        <section class="contact">
+        <section class="contact inner">
             <div class="contents_title">問い合わせフォームのマークアップ</div>
 
             <div class="contact__wrapper">
